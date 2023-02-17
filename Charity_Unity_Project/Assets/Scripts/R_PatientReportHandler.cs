@@ -5,61 +5,81 @@ using UnityEngine.UI;
 
 public class R_PatientReportHandler : MonoBehaviour
 {
-    private bool isOnDisplay;
+    private bool isActive;
+    private bool isMoving;
+
+    private RectTransform rect;
+    private Vector3 defaultPos;
+    private Vector3 defaultSize;
+
     [Header("Move Variables")]
-    [SerializeField] private float moveAmount = 518f;
     [SerializeField] private float moveSpeed = 5f;
+    [SerializeField] private float zoomScale = 3f;
 
-    [Header("Button Variables")]
-    [SerializeField] private Button AbnormalButton;
+    [Header("Screen Display Variables")]
+    [SerializeField] private GameObject screenDisplay;
 
-    public void ToggleHeartMonitor()
+    private void Start()
     {
-        if (isOnDisplay)
-        {
-            //Close
-            Vector2 newPos = new Vector2(transform.localPosition.x + moveAmount, transform.localPosition.y);
-            StartCoroutine(MoveFromTo(transform.localPosition, newPos));
+        rect = GetComponent<RectTransform>();
+        defaultSize = rect.sizeDelta;
+        defaultPos = rect.transform.localPosition;
+    }
 
-            isOnDisplay = false;
+    public void Clicked()
+    {
+        if(isMoving)
+        {
+            return;
+        }
+        if(isActive != true)
+        {
+            // Zoom in and enable other code!!!!
+            Vector2 newSize = new Vector2(defaultPos.x * zoomScale, defaultPos.y * zoomScale);
+            Vector2 newPos = Vector2.zero;
+            StartCoroutine(zoomInAndMove(defaultPos, newPos, defaultSize, newSize));
         }
         else
         {
-            //Open
-            Vector2 newPos = new Vector2(transform.localPosition.x - moveAmount, transform.localPosition.y);
-            StartCoroutine(MoveFromTo(transform.localPosition, newPos));
+            // Zoom out and disable other code!!!
+            Vector2 oldSize = rect.sizeDelta;
+            Vector2 oldPos = rect.transform.localPosition;
+            StartCoroutine(zoomOutAndMove(oldPos, defaultPos, oldSize, defaultSize));
 
-            isOnDisplay = true;
+            screenDisplay.SetActive(false);
         }
     }
 
-    public void OpenReportPanel()
-    {
-        //Open
-        Vector2 newPos = new Vector2(transform.localPosition.x - moveAmount, transform.localPosition.y);
-        StartCoroutine(MoveFromTo(transform.localPosition, newPos));
-
-        isOnDisplay = true;
-    }
-
-    public void CloseReportPanel()
-    {
-        //Close
-        Vector2 newPos = new Vector2(transform.localPosition.x + moveAmount, transform.localPosition.y);
-        StartCoroutine(MoveFromTo(transform.localPosition, newPos));
-
-        isOnDisplay = false;
-    }
-
-    IEnumerator MoveFromTo(Vector2 from, Vector2 to)
+    IEnumerator zoomInAndMove(Vector2 from, Vector2 to, Vector2 fromSize, Vector2 newSize)
     {
         var t = 0f;
+        isMoving = true;
 
         while (t < 1f)
         {
             t += moveSpeed * Time.deltaTime;
-            transform.localPosition = Vector3.Lerp(from, to, t);
+            rect.transform.localPosition = Vector3.Lerp(from, to, t);
+            rect.sizeDelta = Vector3.Lerp(fromSize, newSize, t);
             yield return null;
         }
+        isMoving = false;
+        isActive = true;
+        screenDisplay.SetActive(true);
+    }
+
+    IEnumerator zoomOutAndMove(Vector2 from, Vector2 to, Vector2 fromSize, Vector2 newSize)
+    {
+        var t = 0f;
+        isMoving = true;
+
+        while (t < 1f)
+        {
+            t += moveSpeed * Time.deltaTime;
+            rect.transform.localPosition = Vector3.Lerp(from, to, t);
+            rect.sizeDelta = Vector3.Lerp(fromSize, newSize, t);
+            yield return null;
+        }
+        isMoving = false;
+        isActive = false;
     }
 }

@@ -9,6 +9,7 @@ public class R_PatientReportHandler : MonoBehaviour
     private bool isMoving;
 
     private RectTransform rect;
+    [SerializeField] private Vector3 newDestination;
     private Vector3 defaultPos;
     private Vector3 defaultSize;
 
@@ -36,7 +37,7 @@ public class R_PatientReportHandler : MonoBehaviour
         {
             // Zoom in and enable other code!!!!
             Vector2 newSize = new Vector2(defaultPos.x * zoomScale, defaultPos.y * zoomScale);
-            Vector2 newPos = Vector2.zero;
+            Vector2 newPos = newDestination;
             StartCoroutine(zoomInAndMove(defaultPos, newPos, defaultSize, newSize));
         }
         else

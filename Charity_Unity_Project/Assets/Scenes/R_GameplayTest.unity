@@ -724,7 +724,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   lineRenderer: {fileID: 0}
   points: 100
-  amplitude: 4
+  amplitude: 25
   frequency: 50
   Limits: {x: -400, y: 400}
   movementSpeed: 10

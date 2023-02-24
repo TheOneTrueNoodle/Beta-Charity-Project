@@ -724,10 +724,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   lineRenderer: {fileID: 0}
   points: 100
-  amplitude: 50
-  frequency: 1
+  amplitude: 4
+  frequency: 50
   Limits: {x: -400, y: 400}
-  movementSpeed: 5
+  movementSpeed: 10
 --- !u!120 &467271688
 LineRenderer:
   m_ObjectHideFlags: 0
@@ -2948,7 +2948,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: -297.22995}
+  m_AnchoredPosition: {x: 0, y: -297.22998}
   m_SizeDelta: {x: -37, y: -311.83}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1752555579

@@ -12,6 +12,7 @@ public class R_ToggleHeartMonitor : MonoBehaviour
     [Header("Display Variables")]
     [SerializeField] private GameObject UpArrow;
     [SerializeField] private GameObject DownArrow;
+    [SerializeField] private GameObject ECG_Display;
 
     public void ToggleHeartMonitor()
     {
@@ -20,7 +21,7 @@ public class R_ToggleHeartMonitor : MonoBehaviour
             //Close
             Vector2 newPos = new Vector2(transform.localPosition.x, transform.localPosition.y - moveAmount);
             StartCoroutine(MoveFromTo(transform.localPosition, newPos));
-
+            ECG_Display.SetActive(false);
             isOnDisplay = false;
         }
         else
@@ -28,7 +29,6 @@ public class R_ToggleHeartMonitor : MonoBehaviour
             //Open
             Vector2 newPos = new Vector2(transform.localPosition.x, transform.localPosition.y + moveAmount);
             StartCoroutine(MoveFromTo(transform.localPosition, newPos));
-
             isOnDisplay = true;
         }
     }
@@ -39,6 +39,7 @@ public class R_ToggleHeartMonitor : MonoBehaviour
         {
             UpArrow.SetActive(false);
             DownArrow.SetActive(true);
+            ECG_Display.SetActive(true);
         }
         else
         {

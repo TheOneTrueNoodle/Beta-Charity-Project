@@ -588,10 +588,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pulses:
-  - peak: 50
+  - peak: 5.6489652e+10
     useCustomSpeed: 0
     customSpeed: 10
-  - peak: -10
+  - peak: -2.9585198e+9
     useCustomSpeed: 0
     customSpeed: 10
 --- !u!1 &356948003
@@ -3185,7 +3185,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: -368.0225}
+  m_AnchoredPosition: {x: 0, y: -368.02246}
   m_SizeDelta: {x: -37, y: -176.04498}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1752555579

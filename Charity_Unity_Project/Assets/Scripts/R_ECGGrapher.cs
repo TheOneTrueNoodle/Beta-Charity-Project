@@ -48,7 +48,7 @@ public class R_ECGGrapher : MonoBehaviour
             targetY = transform.localPosition.y + pulse.peak; 
 
             float speed = verticalMoveSpeed;
-            Debug.Log(speed);
+            
             if (pulse.useCustomSpeed)
             {
                 speed = pulse.customSpeed;
@@ -63,7 +63,7 @@ public class R_ECGGrapher : MonoBehaviour
             }
 
             yVelocity = dir * speed;
-            Debug.Log(dir);
+
             if (dir == -1)
             {
                 //Going Down
@@ -110,6 +110,7 @@ public class R_ECGGrapher : MonoBehaviour
                 transform.localPosition = new Vector3(transform.localPosition.x, defaultY);
             }
             transform.localPosition = new Vector3(transform.localPosition.x, 0);
+            
         }
         pulsing = false;
     }

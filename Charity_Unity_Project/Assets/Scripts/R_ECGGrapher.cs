@@ -62,9 +62,37 @@ public class R_ECGGrapher : MonoBehaviour
                 dir = -1;
             }
 
-            yVelocity = dir * speed;
+            //NEW CONCEPT
 
-            if (dir == -1)
+            yVelocity = dir * speed;
+            Vector3 targetPos = new Vector2(transform.localPosition.x, targetY);
+            Vector3 dist = targetPos - transform.localPosition;
+            dist.x = 0;
+            Vector2 tgtVel = Vector2.ClampMagnitude(speed * dist, speed);
+            Vector3 error = tgtVel - rb.velocity;
+            Vector3 force = Vector3.ClampMagnitude(5f * error, 40);
+            rb.AddForce(force);
+
+            while(transform.localPosition.y < targetY)
+            {
+                Debug.Log(transform.localPosition.y);
+                yield return null;
+            }
+
+            targetPos = new Vector2(transform.localPosition.x, defaultY);
+            dist = targetPos - transform.localPosition;
+            dist.x = 0;
+            tgtVel = Vector2.ClampMagnitude(speed * dist, speed);
+            error = tgtVel - rb.velocity;
+            force = Vector3.ClampMagnitude(5f * error, 40);
+            rb.AddForce(force); 
+            
+            while (transform.localPosition.y > defaultY)
+            {
+                yield return null;
+            }
+
+            /*if (dir == -1)
             {
                 //Going Down
                 while (transform.localPosition.y > targetY)
@@ -110,7 +138,7 @@ public class R_ECGGrapher : MonoBehaviour
                 transform.localPosition = new Vector3(transform.localPosition.x, defaultY);
             }
             transform.localPosition = new Vector3(transform.localPosition.x, 0);
-            
+            */
         }
         pulsing = false;
     }

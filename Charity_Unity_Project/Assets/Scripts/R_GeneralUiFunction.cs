@@ -4,15 +4,12 @@ using UnityEngine;
 
 public class R_GeneralUiFunction : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    private bool atNewPos;
+    [Header("Move Variables")]
+    [SerializeField] private float moveAmount = 150f;
+    [SerializeField] private float moveSpeed = 5f;
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+    [Header("Display Variables")]
+    [SerializeField] private GameObject LeftArrow;
+    [SerializeField] private GameObject RightArrow;
 }

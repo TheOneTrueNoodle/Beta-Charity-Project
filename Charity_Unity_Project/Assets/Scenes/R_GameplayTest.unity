@@ -662,7 +662,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1358499264}
+      - m_Target: {fileID: 1471767985}
         m_TargetAssemblyTypeName: R_ReportManager, Assembly-CSharp
         m_MethodName: shiftViewport
         m_Mode: 1
@@ -1521,7 +1521,7 @@ MonoBehaviour:
   onValueChanged:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1358499264}
+      - m_Target: {fileID: 1471767985}
         m_TargetAssemblyTypeName: R_ReportManager, Assembly-CSharp
         m_MethodName: changeDiagnosis
         m_Mode: 3
@@ -1620,7 +1620,7 @@ MonoBehaviour:
   onValueChanged:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1358499264}
+      - m_Target: {fileID: 1471767985}
         m_TargetAssemblyTypeName: R_ReportManager, Assembly-CSharp
         m_MethodName: changeDiagnosis
         m_Mode: 3
@@ -1742,6 +1742,54 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 226463180}
   m_CullTransparentMesh: 1
+--- !u!1 &275412222
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 275412223}
+  - component: {fileID: 275412224}
+  m_Layer: 0
+  m_Name: Patient Manager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &275412223
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 275412222}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 768376091}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &275412224
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 275412222}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1cfc459c107cb4d4ba28804c754fcb25, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  RegularPatientData: {fileID: 11400000, guid: 08cccaae84c217042b9b0a9b64ff7e51, type: 2}
+  IrregularPatientData: {fileID: 11400000, guid: 1ab3d35698476484a9b00b4e42ff4a69, type: 2}
+  PatientNumberPerRound: 6
+  activePatients: []
 --- !u!1 &289653040
 GameObject:
   m_ObjectHideFlags: 0
@@ -1836,7 +1884,7 @@ RectTransform:
   m_Children:
   - {fileID: 1752555578}
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -2005,7 +2053,7 @@ MonoBehaviour:
   onValueChanged:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1358499264}
+      - m_Target: {fileID: 1471767985}
         m_TargetAssemblyTypeName: R_ReportManager, Assembly-CSharp
         m_MethodName: changeDiagnosis
         m_Mode: 3
@@ -2183,7 +2231,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &366615518
 GameObject:
@@ -2271,7 +2319,7 @@ MonoBehaviour:
   onValueChanged:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1358499264}
+      - m_Target: {fileID: 1471767985}
         m_TargetAssemblyTypeName: R_ReportManager, Assembly-CSharp
         m_MethodName: changeDiagnosis
         m_Mode: 3
@@ -2811,7 +2859,7 @@ MonoBehaviour:
   onValueChanged:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1358499264}
+      - m_Target: {fileID: 1471767985}
         m_TargetAssemblyTypeName: R_ReportManager, Assembly-CSharp
         m_MethodName: changeDiagnosis
         m_Mode: 3
@@ -3544,7 +3592,7 @@ MonoBehaviour:
   onValueChanged:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1358499264}
+      - m_Target: {fileID: 1471767985}
         m_TargetAssemblyTypeName: R_ReportManager, Assembly-CSharp
         m_MethodName: changeDiagnosis
         m_Mode: 3
@@ -3778,7 +3826,7 @@ MonoBehaviour:
   onValueChanged:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1358499264}
+      - m_Target: {fileID: 1471767985}
         m_TargetAssemblyTypeName: R_ReportManager, Assembly-CSharp
         m_MethodName: changeDiagnosis
         m_Mode: 3
@@ -4211,7 +4259,7 @@ MonoBehaviour:
   onValueChanged:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1358499264}
+      - m_Target: {fileID: 1471767985}
         m_TargetAssemblyTypeName: R_ReportManager, Assembly-CSharp
         m_MethodName: changeDiagnosis
         m_Mode: 3
@@ -4517,6 +4565,40 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 767478260}
   m_CullTransparentMesh: 1
+--- !u!1 &768376090
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 768376091}
+  m_Layer: 0
+  m_Name: '**** Managers ****'
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &768376091
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 768376090}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1749152054}
+  - {fileID: 1471767986}
+  - {fileID: 275412223}
+  m_Father: {fileID: 0}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &790997540
 GameObject:
   m_ObjectHideFlags: 0
@@ -5852,7 +5934,7 @@ MonoBehaviour:
   onValueChanged:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1358499264}
+      - m_Target: {fileID: 1471767985}
         m_TargetAssemblyTypeName: R_ReportManager, Assembly-CSharp
         m_MethodName: changeDiagnosis
         m_Mode: 3
@@ -6487,7 +6569,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1063881167
 GameObject:
@@ -6871,7 +6953,7 @@ RectTransform:
   m_Children:
   - {fileID: 927305281}
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -7040,7 +7122,7 @@ MonoBehaviour:
   onValueChanged:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1358499264}
+      - m_Target: {fileID: 1471767985}
         m_TargetAssemblyTypeName: R_ReportManager, Assembly-CSharp
         m_MethodName: changeDiagnosis
         m_Mode: 3
@@ -7747,7 +7829,7 @@ MonoBehaviour:
   onValueChanged:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1358499264}
+      - m_Target: {fileID: 1471767985}
         m_TargetAssemblyTypeName: R_ReportManager, Assembly-CSharp
         m_MethodName: changeDiagnosis
         m_Mode: 3
@@ -7771,7 +7853,6 @@ GameObject:
   - component: {fileID: 1358499261}
   - component: {fileID: 1358499263}
   - component: {fileID: 1358499262}
-  - component: {fileID: 1358499264}
   m_Layer: 5
   m_Name: AI Monitor Panel
   m_TagString: Untagged
@@ -7838,45 +7919,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1358499260}
   m_CullTransparentMesh: 1
---- !u!114 &1358499264
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1358499260}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f18a89bc1631df646866d3e55053c175, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  currentDiagnosis: 0
-  currentPatient: {fileID: 0}
-  moveAmount: 370
-  moveSpeed: 5
-  movingPanel: {fileID: 742445806}
-  removeDiagnosisButton: {fileID: 2002831723}
-  submitDiagnosisButton: {fileID: 1768505507}
-  diagnosisDisplay: {fileID: 1443005461}
-  PossibleDiagnosis:
-  - Undiagnosed
-  - Regular Sinus Rhythm
-  - Regular Non Sinus Rhythm
-  - Regular First Degree Heart Block
-  - Regular Complete Heart Block
-  - Regular Atrial Flutter
-  - Regular AVNRT
-  - Regular AVRT
-  - Regular Ventricular Tachycardia
-  - Regularly Irregular Atrial Bigeminy/Trigeminy
-  - Regularly Irregular Ventricular Bigeminy/Trigeminy
-  - Regularly Irregular Second-degree (Mobitz 1) Heart Block
-  - Irregularly Irregular Atrial Premature Complexes
-  - Irregularly Irregular Ventricular Premature Complexes
-  - Irregularly Irregular Multifocal Atrial Tachycardia
-  - Irregularly irregular Atrial Fibrillation
-  - Irregularly Irregular Atrial Flutter with Variable Conduction
-  - Irregularly Irregular Second-Degree (Mobitz 2) Heart Block
 --- !u!1 &1367912063
 GameObject:
   m_ObjectHideFlags: 0
@@ -8173,7 +8215,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1358499264}
+      - m_Target: {fileID: 1471767985}
         m_TargetAssemblyTypeName: R_ReportManager, Assembly-CSharp
         m_MethodName: shiftViewport
         m_Mode: 1
@@ -8458,6 +8500,82 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1462452555}
   m_CullTransparentMesh: 1
+--- !u!1 &1471767984
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1471767986}
+  - component: {fileID: 1471767985}
+  m_Layer: 0
+  m_Name: Report Manager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1471767985
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1471767984}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f18a89bc1631df646866d3e55053c175, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  currentDiagnosis: 0
+  currentPatient:
+    patientName: 
+    patientAge: 0
+    patientBioGender: 
+    ECG_GraphSprite: {fileID: 0}
+    correctDiagnosis: 0
+  moveAmount: 370
+  moveSpeed: 5
+  movingPanel: {fileID: 742445806}
+  removeDiagnosisButton: {fileID: 2002831723}
+  submitDiagnosisButton: {fileID: 1768505507}
+  diagnosisDisplay: {fileID: 1443005461}
+  PossibleDiagnosis:
+  - Undiagnosed
+  - Regular Sinus Rhythm
+  - Regular Non Sinus Rhythm
+  - Regular First Degree Heart Block
+  - Regular Complete Heart Block
+  - Regular Atrial Flutter
+  - Regular AVNRT
+  - Regular AVRT
+  - Regular Ventricular Tachycardia
+  - Regularly Irregular Atrial Bigeminy/Trigeminy
+  - Regularly Irregular Ventricular Bigeminy/Trigeminy
+  - Regularly Irregular Second-degree (Mobitz 1) Heart Block
+  - Irregularly Irregular Atrial Premature Complexes
+  - Irregularly Irregular Ventricular Premature Complexes
+  - Irregularly Irregular Multifocal Atrial Tachycardia
+  - Irregularly irregular Atrial Fibrillation
+  - Irregularly Irregular Atrial Flutter with Variable Conduction
+  - Irregularly Irregular Second-Degree (Mobitz 2) Heart Block
+--- !u!4 &1471767986
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1471767984}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 768376091}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1485999154
 GameObject:
   m_ObjectHideFlags: 0
@@ -8783,7 +8901,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1358499264}
+      - m_Target: {fileID: 1471767985}
         m_TargetAssemblyTypeName: R_ReportManager, Assembly-CSharp
         m_MethodName: shiftViewport
         m_Mode: 1
@@ -9143,7 +9261,7 @@ MonoBehaviour:
   onValueChanged:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1358499264}
+      - m_Target: {fileID: 1471767985}
         m_TargetAssemblyTypeName: R_ReportManager, Assembly-CSharp
         m_MethodName: changeDiagnosis
         m_Mode: 3
@@ -10026,6 +10144,52 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   respawnPoint: {fileID: 1046877701}
+--- !u!1 &1749152053
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1749152054}
+  - component: {fileID: 1749152055}
+  m_Layer: 0
+  m_Name: Game Manager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1749152054
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1749152053}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 768376091}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1749152055
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1749152053}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 39a50bcad2b3a6b4fb464e6f0dd05957, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  reportManager: {fileID: 1471767985}
+  patientManager: {fileID: 275412224}
 --- !u!1 &1750772467
 GameObject:
   m_ObjectHideFlags: 0
@@ -10285,7 +10449,7 @@ MonoBehaviour:
   onValueChanged:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1358499264}
+      - m_Target: {fileID: 1471767985}
         m_TargetAssemblyTypeName: R_ReportManager, Assembly-CSharp
         m_MethodName: changeDiagnosis
         m_Mode: 3
@@ -10384,7 +10548,7 @@ MonoBehaviour:
   onValueChanged:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1358499264}
+      - m_Target: {fileID: 1471767985}
         m_TargetAssemblyTypeName: R_ReportManager, Assembly-CSharp
         m_MethodName: changeDiagnosis
         m_Mode: 3
@@ -10481,7 +10645,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1358499264}
+      - m_Target: {fileID: 1471767985}
         m_TargetAssemblyTypeName: R_ReportManager, Assembly-CSharp
         m_MethodName: SubmitDiagnosis
         m_Mode: 1
@@ -10770,7 +10934,7 @@ MonoBehaviour:
   onValueChanged:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1358499264}
+      - m_Target: {fileID: 1471767985}
         m_TargetAssemblyTypeName: R_ReportManager, Assembly-CSharp
         m_MethodName: changeDiagnosis
         m_Mode: 3
@@ -11651,7 +11815,7 @@ MonoBehaviour:
   onValueChanged:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1358499264}
+      - m_Target: {fileID: 1471767985}
         m_TargetAssemblyTypeName: R_ReportManager, Assembly-CSharp
         m_MethodName: changeDiagnosis
         m_Mode: 3
@@ -12361,7 +12525,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1358499264}
+      - m_Target: {fileID: 1471767985}
         m_TargetAssemblyTypeName: R_ReportManager, Assembly-CSharp
         m_MethodName: changeDiagnosis
         m_Mode: 3
@@ -13244,7 +13408,7 @@ MonoBehaviour:
   onValueChanged:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1358499264}
+      - m_Target: {fileID: 1471767985}
         m_TargetAssemblyTypeName: R_ReportManager, Assembly-CSharp
         m_MethodName: changeDiagnosis
         m_Mode: 3

@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class R_PatientManager : MonoBehaviour
 {
+    public R_PodMovementHandler podMovementHandler;
+
     public R_PatientData RegularPatientData;
     public R_PatientData IrregularPatientData;
 
@@ -32,7 +34,6 @@ public class R_PatientManager : MonoBehaviour
 
         shufflePatientOrder(activePatients);
     }
-
     private void shufflePatientOrder<T>(List<T> inputList)
     {
         for(int i = 0; i < inputList.Count - 1; i++)
@@ -42,5 +43,6 @@ public class R_PatientManager : MonoBehaviour
             inputList[i] = inputList[rand];
             inputList[rand] = temp;
         }
+        podMovementHandler.AssignPatients(activePatients);
     }
 }

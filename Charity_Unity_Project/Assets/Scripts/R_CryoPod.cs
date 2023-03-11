@@ -4,15 +4,5 @@ using UnityEngine;
 
 public class R_CryoPod : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+    public R_Patient thisPatient;
 }

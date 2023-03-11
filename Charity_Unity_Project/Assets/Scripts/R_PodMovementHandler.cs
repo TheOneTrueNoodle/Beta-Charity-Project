@@ -20,6 +20,14 @@ public class R_PodMovementHandler : MonoBehaviour
         StartCoroutine(CoroutineCoordinator());
     }
 
+    public void AssignPatients(List<R_Patient> newPatients)
+    {
+        for(int i = 0; i < newPatients.Count; i++)
+        {
+            cryoPods[i].thisPatient = newPatients[i];
+        }
+    }
+
     public void MoveLeft()
     {
         if(currentActivePod > 0)
@@ -69,7 +77,6 @@ public class R_PodMovementHandler : MonoBehaviour
                 if (moving != true) { yield return StartCoroutine(moveQueue.Dequeue()); }
                 yield return null;
             yield return null;
-            
         }
     }
 }

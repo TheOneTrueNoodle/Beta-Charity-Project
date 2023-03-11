@@ -12,4 +12,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ca08df2a5abc8fe48ba6707a863c2741, type: 3}
   m_Name: Regular Patient Data
   m_EditorClassIdentifier: 
-  AllPatients: []
+  AllPatients:
+  - patientName: Conor
+    patientAge: 18
+    patientBioGender: Male
+    ECG_GraphSprite: {fileID: 0}
+    correctDiagnosis: 1
+  - patientName: Amber
+    patientAge: 23
+    patientBioGender: Female
+    ECG_GraphSprite: {fileID: 0}
+    correctDiagnosis: 2

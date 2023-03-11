@@ -1862,6 +1862,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1cfc459c107cb4d4ba28804c754fcb25, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  podMovementHandler: {fileID: 1085769128}
   RegularPatientData: {fileID: 11400000, guid: 08cccaae84c217042b9b0a9b64ff7e51, type: 2}
   IrregularPatientData: {fileID: 11400000, guid: 1ab3d35698476484a9b00b4e42ff4a69, type: 2}
   PatientNumberPerRound: 6
@@ -2645,7 +2646,7 @@ RectTransform:
   m_GameObject: {fileID: 414019926}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1.0001369, y: 1.0001369, z: 1.0001369}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 720441470}
@@ -2704,9 +2705,9 @@ MonoBehaviour:
     serializedVersion: 2
     rgba: 4294967295
   m_fontSize: 72
-  m_fontSizeBase: 36
+  m_fontSizeBase: 72
   m_fontWeight: 400
-  m_enableAutoSizing: 1
+  m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 1
@@ -4742,6 +4743,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a4ca23893bb823a4eab1701359da5a2f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  thisPatient:
+    patientName: 
+    patientAge: 0
+    patientBioGender: 
+    ECG_GraphSprite: {fileID: 0}
+    correctDiagnosis: 0
 --- !u!1 &741889807
 GameObject:
   m_ObjectHideFlags: 0
@@ -5546,6 +5553,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a4ca23893bb823a4eab1701359da5a2f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  thisPatient:
+    patientName: 
+    patientAge: 0
+    patientBioGender: 
+    ECG_GraphSprite: {fileID: 0}
+    correctDiagnosis: 0
 --- !u!1 &867310334
 GameObject:
   m_ObjectHideFlags: 0
@@ -5771,6 +5784,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a4ca23893bb823a4eab1701359da5a2f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  thisPatient:
+    patientName: 
+    patientAge: 0
+    patientBioGender: 
+    ECG_GraphSprite: {fileID: 0}
+    correctDiagnosis: 0
 --- !u!1 &927305280
 GameObject:
   m_ObjectHideFlags: 0
@@ -6202,7 +6221,7 @@ RectTransform:
   m_GameObject: {fileID: 964142602}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1.0001369, y: 1.0001369, z: 1.0001369}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1367820459}
@@ -6261,9 +6280,9 @@ MonoBehaviour:
     serializedVersion: 2
     rgba: 4294967295
   m_fontSize: 72
-  m_fontSizeBase: 36
+  m_fontSizeBase: 72
   m_fontWeight: 400
-  m_enableAutoSizing: 1
+  m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 1
@@ -8111,7 +8130,7 @@ RectTransform:
   m_GameObject: {fileID: 1250637585}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1.0001369, y: 1.0001369, z: 1.0001369}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 2023861959}
@@ -8170,9 +8189,9 @@ MonoBehaviour:
     serializedVersion: 2
     rgba: 4294967295
   m_fontSize: 72
-  m_fontSizeBase: 36
+  m_fontSizeBase: 72
   m_fontWeight: 400
-  m_enableAutoSizing: 1
+  m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 1
@@ -9093,6 +9112,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a4ca23893bb823a4eab1701359da5a2f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  thisPatient:
+    patientName: 
+    patientAge: 0
+    patientBioGender: 
+    ECG_GraphSprite: {fileID: 0}
+    correctDiagnosis: 0
 --- !u!1 &1367912063
 GameObject:
   m_ObjectHideFlags: 0
@@ -10018,7 +10043,7 @@ RectTransform:
   m_GameObject: {fileID: 1524190299}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1.0001369, y: 1.0001369, z: 1.0001369}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 899013197}
@@ -10077,9 +10102,9 @@ MonoBehaviour:
     serializedVersion: 2
     rgba: 4294967295
   m_fontSize: 72
-  m_fontSizeBase: 36
+  m_fontSizeBase: 72
   m_fontWeight: 400
-  m_enableAutoSizing: 1
+  m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 1
@@ -10744,7 +10769,7 @@ RectTransform:
   m_GameObject: {fileID: 1587213940}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1.0001369, y: 1.0001369, z: 1.0001369}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1589381930}
@@ -10803,9 +10828,9 @@ MonoBehaviour:
     serializedVersion: 2
     rgba: 4294967295
   m_fontSize: 72
-  m_fontSizeBase: 36
+  m_fontSizeBase: 72
   m_fontWeight: 400
-  m_enableAutoSizing: 1
+  m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 1
@@ -10942,6 +10967,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a4ca23893bb823a4eab1701359da5a2f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  thisPatient:
+    patientName: 
+    patientAge: 0
+    patientBioGender: 
+    ECG_GraphSprite: {fileID: 0}
+    correctDiagnosis: 0
 --- !u!1 &1597461045
 GameObject:
   m_ObjectHideFlags: 0
@@ -14289,9 +14320,9 @@ MonoBehaviour:
     serializedVersion: 2
     rgba: 4294967295
   m_fontSize: 72
-  m_fontSizeBase: 36
+  m_fontSizeBase: 72
   m_fontWeight: 400
-  m_enableAutoSizing: 1
+  m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 1
@@ -14428,6 +14459,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a4ca23893bb823a4eab1701359da5a2f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  thisPatient:
+    patientName: 
+    patientAge: 0
+    patientBioGender: 
+    ECG_GraphSprite: {fileID: 0}
+    correctDiagnosis: 0
 --- !u!1 &2031405058
 GameObject:
   m_ObjectHideFlags: 0

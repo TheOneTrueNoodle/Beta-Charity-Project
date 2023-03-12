@@ -1867,6 +1867,7 @@ MonoBehaviour:
   IrregularPatientData: {fileID: 11400000, guid: 1ab3d35698476484a9b00b4e42ff4a69, type: 2}
   PatientNumberPerRound: 6
   activePatients: []
+  currentActivePatientNum: 0
 --- !u!1 &289653040
 GameObject:
   m_ObjectHideFlags: 0
@@ -4744,11 +4745,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   thisPatient:
+    diagnosed: 0
     patientName: 
     patientAge: 0
     patientBioGender: 
     ECG_GraphSprite: {fileID: 0}
     correctDiagnosis: 0
+    submittedDiagnosis: 0
 --- !u!1 &741889807
 GameObject:
   m_ObjectHideFlags: 0
@@ -5554,11 +5557,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   thisPatient:
+    diagnosed: 0
     patientName: 
     patientAge: 0
     patientBioGender: 
     ECG_GraphSprite: {fileID: 0}
     correctDiagnosis: 0
+    submittedDiagnosis: 0
 --- !u!1 &867310334
 GameObject:
   m_ObjectHideFlags: 0
@@ -5785,11 +5790,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   thisPatient:
+    diagnosed: 0
     patientName: 
     patientAge: 0
     patientBioGender: 
     ECG_GraphSprite: {fileID: 0}
     correctDiagnosis: 0
+    submittedDiagnosis: 0
 --- !u!1 &927305280
 GameObject:
   m_ObjectHideFlags: 0
@@ -7671,9 +7678,13 @@ MonoBehaviour:
   - {fileID: 720441473}
   - {fileID: 2023861962}
   - {fileID: 1367820462}
+  currentActivePod: 0
   moveAmount: 440
   moveSpeed: 5
   moveDelay: 1
+  nameDisp: {fileID: 867310336}
+  ageDisp: {fileID: 790997542}
+  genderDisp: {fileID: 1011818248}
 --- !u!1 &1096836573
 GameObject:
   m_ObjectHideFlags: 0
@@ -9113,11 +9124,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   thisPatient:
+    diagnosed: 0
     patientName: 
     patientAge: 0
     patientBioGender: 
     ECG_GraphSprite: {fileID: 0}
     correctDiagnosis: 0
+    submittedDiagnosis: 0
 --- !u!1 &1367912063
 GameObject:
   m_ObjectHideFlags: 0
@@ -9729,12 +9742,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   currentDiagnosis: 0
-  currentPatient:
-    patientName: 
-    patientAge: 0
-    patientBioGender: 
-    ECG_GraphSprite: {fileID: 0}
-    correctDiagnosis: 0
   moveAmount: 370
   moveSpeed: 5
   movingPanel: {fileID: 742445806}
@@ -10968,11 +10975,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   thisPatient:
+    diagnosed: 0
     patientName: 
     patientAge: 0
     patientBioGender: 
     ECG_GraphSprite: {fileID: 0}
     correctDiagnosis: 0
+    submittedDiagnosis: 0
 --- !u!1 &1597461045
 GameObject:
   m_ObjectHideFlags: 0
@@ -11364,7 +11373,7 @@ GameObject:
   - component: {fileID: 1659307832}
   - component: {fileID: 1659307831}
   m_Layer: 5
-  m_Name: Panel
+  m_Name: Patient Pods Panel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -12304,9 +12313,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1471767985}
-        m_TargetAssemblyTypeName: R_ReportManager, Assembly-CSharp
-        m_MethodName: SubmitDiagnosis
+      - m_Target: {fileID: 1749152055}
+        m_TargetAssemblyTypeName: R_GameManager, Assembly-CSharp
+        m_MethodName: enterPatientDiagnosis
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -14460,11 +14469,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   thisPatient:
+    diagnosed: 0
     patientName: 
     patientAge: 0
     patientBioGender: 
     ECG_GraphSprite: {fileID: 0}
     correctDiagnosis: 0
+    submittedDiagnosis: 0
 --- !u!1 &2031405058
 GameObject:
   m_ObjectHideFlags: 0

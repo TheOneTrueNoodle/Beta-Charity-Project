@@ -6,7 +6,6 @@ public class R_ReportManager : MonoBehaviour
 {
     //Diagnosis Variables
     public Diagnosis currentDiagnosis;
-    public R_Patient currentPatient;
 
     //Moving Viewport Variables
     [Header("Move Variables")]
@@ -55,19 +54,30 @@ public class R_ReportManager : MonoBehaviour
         }
     }
 
-    public void SubmitDiagnosis()
+    public void SubmitDiagnosis(R_Patient currentPatient)
     {
-        if(currentDiagnosis == currentPatient.correctDiagnosis)
+        int diagnosisNumber;
+        if(currentPatient.diagnosed == true)
         {
-            //Correct Answer
+            diagnosisNumber = (int)currentPatient.submittedDiagnosis;
+            diagnosisDisplay.text = "This patient has already been diagnosed with " + PossibleDiagnosis[diagnosisNumber];
+        }
+        else if(currentDiagnosis == currentPatient.correctDiagnosis)
+        {
+            diagnosisNumber = (int)currentDiagnosis;
+            diagnosisDisplay.text = PossibleDiagnosis[diagnosisNumber] + " is the correct diagnosis";
+            currentPatient.diagnosed = true;
+            currentPatient.submittedDiagnosis = currentDiagnosis;
         }
         else if(currentDiagnosis != Diagnosis.Undiagnosed)
         {
-            //Incorrect Answer
+            diagnosisNumber = (int)currentDiagnosis;
+            diagnosisDisplay.text = PossibleDiagnosis[diagnosisNumber] + " is the incorrect diagnosis"; //Currently does not lock you out of correcting your mistake
+            //currentPatient.diagnosed = true;
         }
         else
         {
-            //No Diagnosis
+            diagnosisDisplay.text = "Please select a diagnosis";
         }
     }
 

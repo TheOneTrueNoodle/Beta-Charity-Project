@@ -1,11 +1,12 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class R_PodMovementHandler : MonoBehaviour
 {
     public List<R_CryoPod> cryoPods;
-    private int currentActivePod = 0;
+    public int currentActivePod = 0;
 
     [Header("Move Variables")]
     [SerializeField] private float moveAmount = 440f;
@@ -14,6 +15,12 @@ public class R_PodMovementHandler : MonoBehaviour
     private Queue<IEnumerator> moveQueue = new Queue<IEnumerator>();
     [SerializeField] private float moveDelay = 1f;
     private bool moving;
+
+    [Header("Patient Information Display Variables")]
+    [SerializeField] private TMP_Text nameDisp;
+    [SerializeField] private TMP_Text ageDisp;
+    [SerializeField] private TMP_Text genderDisp;
+
 
     private void Start()
     {
@@ -26,6 +33,7 @@ public class R_PodMovementHandler : MonoBehaviour
         {
             cryoPods[i].thisPatient = newPatients[i];
         }
+        changeDisplays();
     }
 
     public void MoveLeft()
@@ -45,6 +53,14 @@ public class R_PodMovementHandler : MonoBehaviour
             currentActivePod++;
         }
     }
+
+    private void changeDisplays()
+    {
+        nameDisp.text = "Name: " + cryoPods[currentActivePod].thisPatient.patientName;
+        ageDisp.text = "Age: " + cryoPods[currentActivePod].thisPatient.patientAge.ToString();
+        genderDisp.text = "Bio Sex: " + cryoPods[currentActivePod].thisPatient.patientBioGender;
+    }
+
     IEnumerator MoveFromTo(bool movingRight)
     {
         moving = true;
@@ -67,6 +83,7 @@ public class R_PodMovementHandler : MonoBehaviour
             yield return null;
         }
         moving = false;
+        changeDisplays();
         yield return null;
     }
     IEnumerator CoroutineCoordinator()

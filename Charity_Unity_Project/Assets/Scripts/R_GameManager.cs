@@ -12,4 +12,12 @@ public class R_GameManager : MonoBehaviour
     {
         patientManager.newPatientSet(1);
     }
+
+    public void enterPatientDiagnosis()
+    {
+        if(patientManager.activePatients[patientManager.currentActivePatientNum].diagnosed != true)
+        {
+            reportManager.SubmitDiagnosis(patientManager.activePatients[patientManager.currentActivePatientNum]);
+        }
+    }
 }

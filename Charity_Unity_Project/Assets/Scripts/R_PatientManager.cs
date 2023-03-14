@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class R_PatientManager : MonoBehaviour
 {
-    public R_PodMovementHandler podMovementHandler;
+    public R_PodMovementHandlerCarousel podMovementHandler;
 
     public R_PatientData RegularPatientData;
     public R_PatientData IrregularPatientData;
@@ -48,6 +48,6 @@ public class R_PatientManager : MonoBehaviour
             inputList[i] = inputList[rand];
             inputList[rand] = temp;
         }
-        //podMovementHandler.AssignPatients(activePatients);
+        podMovementHandler.AssignPatients(activePatients);
     }
 }

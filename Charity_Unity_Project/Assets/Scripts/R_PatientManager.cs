@@ -17,7 +17,7 @@ public class R_PatientManager : MonoBehaviour
     //Load patient data randomly from massive data of stuff
     private void Update()
     {
-        currentActivePatientNum = podMovementHandler.currentActivePod;
+        //currentActivePatientNum = podMovementHandler.currentActivePod;
     }
 
     //Function to randomly assign how many patients from each list to add to the active patient list
@@ -48,6 +48,6 @@ public class R_PatientManager : MonoBehaviour
             inputList[i] = inputList[rand];
             inputList[rand] = temp;
         }
-        podMovementHandler.AssignPatients(activePatients);
+        //podMovementHandler.AssignPatients(activePatients);
     }
 }

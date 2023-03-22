@@ -54,13 +54,15 @@ public class R_ReportManager : MonoBehaviour
         }
     }
 
-    public void SubmitDiagnosis(R_Patient currentPatient)
+    public bool SubmitDiagnosis(R_Patient currentPatient)
     {
+        Debug.Log("CheckedDiagnosis");
         int diagnosisNumber;
         if(currentPatient.diagnosed == true)
         {
             diagnosisNumber = (int)currentPatient.submittedDiagnosis;
             diagnosisDisplay.text = "This patient has already been diagnosed with " + PossibleDiagnosis[diagnosisNumber];
+            return false;
         }
         else if(currentDiagnosis == currentPatient.correctDiagnosis)
         {
@@ -68,16 +70,19 @@ public class R_ReportManager : MonoBehaviour
             diagnosisDisplay.text = PossibleDiagnosis[diagnosisNumber] + " is the correct diagnosis";
             currentPatient.diagnosed = true;
             currentPatient.submittedDiagnosis = currentDiagnosis;
+            return true;
         }
         else if(currentDiagnosis != Diagnosis.Undiagnosed)
         {
             diagnosisNumber = (int)currentDiagnosis;
             diagnosisDisplay.text = PossibleDiagnosis[diagnosisNumber] + " is the incorrect diagnosis"; //Currently does not lock you out of correcting your mistake
             //currentPatient.diagnosed = true;
+            return false;
         }
         else
         {
             diagnosisDisplay.text = "Please select a diagnosis";
+            return false;
         }
     }
 

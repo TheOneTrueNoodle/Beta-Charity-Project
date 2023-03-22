@@ -26,7 +26,15 @@ public class R_PatientManager : MonoBehaviour
         for(int i = 0; i < numOfIrregular; i++)
         {
             int patient = Random.Range(0, IrregularPatientData.AllPatients.Count);
-            activePatients.Add(IrregularPatientData.AllPatients[patient]);
+            R_Patient newPatient = new R_Patient();
+
+            newPatient.patientName = IrregularPatientData.AllPatients[patient].patientName;
+            newPatient.patientAge = IrregularPatientData.AllPatients[patient].patientAge;
+            newPatient.patientBioGender = IrregularPatientData.AllPatients[patient].patientBioGender;
+            newPatient.ECG_GraphSprite = IrregularPatientData.AllPatients[patient].ECG_GraphSprite;
+            newPatient.correctDiagnosis = IrregularPatientData.AllPatients[patient].correctDiagnosis;
+
+            activePatients.Add(newPatient);
         }
 
         int remainingPatients = PatientNumberPerRound - numOfIrregular;
@@ -34,7 +42,15 @@ public class R_PatientManager : MonoBehaviour
         for(int i = 0; i < remainingPatients; i++)
         {
             int patient = Random.Range(0, RegularPatientData.AllPatients.Count);
-            activePatients.Add(RegularPatientData.AllPatients[patient]);
+            R_Patient newPatient = new R_Patient();
+
+            newPatient.patientName = RegularPatientData.AllPatients[patient].patientName;
+            newPatient.patientAge = RegularPatientData.AllPatients[patient].patientAge;
+            newPatient.patientBioGender = RegularPatientData.AllPatients[patient].patientBioGender;
+            newPatient.ECG_GraphSprite = RegularPatientData.AllPatients[patient].ECG_GraphSprite;
+            newPatient.correctDiagnosis = RegularPatientData.AllPatients[patient].correctDiagnosis;
+
+            activePatients.Add(newPatient);
         }
 
         shufflePatientOrder(activePatients);

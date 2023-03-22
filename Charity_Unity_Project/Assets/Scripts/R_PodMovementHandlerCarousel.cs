@@ -5,6 +5,7 @@ using TMPro;
 
 public class R_PodMovementHandlerCarousel : MonoBehaviour
 {
+    public R_PatientManager patientManager;
     public List<R_CryoPod> cryoPods;
     public int currentActivePod = 0;
 
@@ -25,6 +26,11 @@ public class R_PodMovementHandlerCarousel : MonoBehaviour
     private void Start()
     {
         StartCoroutine(CoroutineCoordinator());
+    }
+
+    private void Update()
+    {
+        patientManager.currentActivePatientNum = currentActivePod;
     }
 
     public void AssignPatients(List<R_Patient> newPatients)

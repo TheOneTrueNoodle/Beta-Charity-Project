@@ -6,6 +6,7 @@ public class R_GameManager : MonoBehaviour
 {
     public R_ReportManager reportManager;
     public R_PatientManager patientManager;
+    public R_ScoreManager scoreManager;
 
     //Function to change active patient
     private void Start()
@@ -15,9 +16,18 @@ public class R_GameManager : MonoBehaviour
 
     public void enterPatientDiagnosis()
     {
+        Debug.Log("entered diagnosis");
         if(patientManager.activePatients[patientManager.currentActivePatientNum].diagnosed != true)
         {
-            reportManager.SubmitDiagnosis(patientManager.activePatients[patientManager.currentActivePatientNum]);
+            if(reportManager.SubmitDiagnosis(patientManager.activePatients[patientManager.currentActivePatientNum]) == true)
+            {
+                CallScoreIncrease(1f);
+            }
         }
+    }
+
+    public void CallScoreIncrease(float modifier)
+    {
+        scoreManager.IncreaseScore(modifier);
     }
 }

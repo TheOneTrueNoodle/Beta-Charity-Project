@@ -5,7 +5,7 @@ using UnityEngine;
 [System.Serializable]
 public class R_Patient
 {
-    [HideInInspector] public bool diagnosed = false;
+    public bool diagnosed = false;
 
     public string patientName;
     public int patientAge;

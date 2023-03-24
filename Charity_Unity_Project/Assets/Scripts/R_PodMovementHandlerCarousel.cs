@@ -35,7 +35,7 @@ public class R_PodMovementHandlerCarousel : MonoBehaviour
 
     public void AssignPatients(List<R_Patient> newPatients)
     {
-        for(int i = 0; i < newPatients.Count; i++)
+        for (int i = 0; i < newPatients.Count; i++)
         {
             cryoPods[i].thisPatient = newPatients[i];
         }
@@ -44,7 +44,7 @@ public class R_PodMovementHandlerCarousel : MonoBehaviour
 
     public void MoveLeft()
     {
-        if(currentActivePod > 0)
+        if (currentActivePod > 0)
         {
             //moveQueue.Enqueue(MoveFromTo(false));
             moveQueue.Enqueue(CarouselMovement());
@@ -55,7 +55,7 @@ public class R_PodMovementHandlerCarousel : MonoBehaviour
 
     public void MoveRight()
     {
-        if(currentActivePod < cryoPods.Count-1)
+        if (currentActivePod < cryoPods.Count - 1)
         {
             //moveQueue.Enqueue(MoveFromTo(true));
             moveQueue.Enqueue(CarouselMovement());
@@ -147,7 +147,7 @@ public class R_PodMovementHandlerCarousel : MonoBehaviour
         {
             from[i] = cryoPods[i].transform.localPosition;
             int distFromActive;
-            if(i > currentActivePod) { distFromActive = 0 - (i - currentActivePod); }
+            if (i > currentActivePod) { distFromActive = 0 - (i - currentActivePod); }
             else { distFromActive = 0 - (currentActivePod - i); }
             if (distFromActive == -4) { distFromActive = -2; }
             else if (distFromActive == -5) { distFromActive = -1; }
@@ -160,7 +160,7 @@ public class R_PodMovementHandlerCarousel : MonoBehaviour
             {
                 to[i] = new Vector2(transform.localPosition.x, transform.localPosition.y);
             }
-            else if(distFromActive == -3)
+            else if (distFromActive == -3)
             {
                 to[i] = Vector2.zero;
             }
@@ -168,7 +168,7 @@ public class R_PodMovementHandlerCarousel : MonoBehaviour
             {
                 to[i] = Vector2.zero;
             }
-        } 
+        }
 
         while (t < 1f)
         {
@@ -217,7 +217,7 @@ public class R_PodMovementHandlerCarousel : MonoBehaviour
         {
             while (moveQueue.Count > 0)
                 if (moving != true) { yield return StartCoroutine(moveQueue.Dequeue()); }
-                yield return null;
+            yield return null;
             yield return null;
         }
     }

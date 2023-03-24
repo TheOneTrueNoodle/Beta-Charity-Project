@@ -20,9 +20,13 @@ public class D_MeniFunctionality : MonoBehaviour
     public Color offColour;
     public Color onColour;
 
+    public D_Audio_System audio_System;
+
     void Start()
     {
         changeSettingsMenu(0);
+
+        audio_System = FindObjectOfType<D_Audio_System>();
     }
 
     public void playGame()
@@ -32,15 +36,18 @@ public class D_MeniFunctionality : MonoBehaviour
 
     public void openSettings()
     {
+
         if (settingsOpen)
         {
             settingsOpen = false;
             settingsAnimator.SetBool("settingsOpen", false);
+
         }
         else
         {
             settingsOpen = true;
             settingsAnimator.SetBool("settingsOpen", true);
+
         }
     }
 

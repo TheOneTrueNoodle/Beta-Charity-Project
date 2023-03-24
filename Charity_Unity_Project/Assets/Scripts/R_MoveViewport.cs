@@ -19,6 +19,7 @@ public class R_MoveViewport : MonoBehaviour
         StartCoroutine(MoveFromTo(transform.localPosition, newPos));
         LeftArrow.SetActive(false);
         MovedLeft = true;
+
     }
 
     public void moveRight()
@@ -36,11 +37,15 @@ public class R_MoveViewport : MonoBehaviour
         {
             LeftArrow.SetActive(false);
             RightArrow.SetActive(true);
+
+
         }
         else
         {
             LeftArrow.SetActive(true);
             RightArrow.SetActive(false);
+
+
         }
     }
 

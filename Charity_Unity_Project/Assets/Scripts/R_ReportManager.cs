@@ -22,7 +22,7 @@ public class R_ReportManager : MonoBehaviour
 
     public void shiftViewport()
     {
-        if(isInNewPos)
+        if (isInNewPos)
         {
             //Move Up
             Vector2 newPos = new Vector2(movingPanel.localPosition.x, movingPanel.localPosition.y - moveAmount);
@@ -42,7 +42,7 @@ public class R_ReportManager : MonoBehaviour
     {
         currentDiagnosis = (Diagnosis)newDiagnosisValue;
         diagnosisDisplay.text = "Your current diagnosis is: " + PossibleDiagnosis[newDiagnosisValue];
-        if(currentDiagnosis != Diagnosis.Undiagnosed)
+        if (currentDiagnosis != Diagnosis.Undiagnosed)
         {
             removeDiagnosisButton.SetActive(true);
             submitDiagnosisButton.SetActive(true);
@@ -58,24 +58,29 @@ public class R_ReportManager : MonoBehaviour
     {
         Debug.Log("CheckedDiagnosis");
         int diagnosisNumber;
-        if(currentPatient.diagnosed == true)
+        if (currentPatient.diagnosed == true)
         {
             diagnosisNumber = (int)currentPatient.submittedDiagnosis;
             diagnosisDisplay.text = "This patient has already been diagnosed with " + PossibleDiagnosis[diagnosisNumber];
             return false;
         }
-        else if(currentDiagnosis == currentPatient.correctDiagnosis)
+        else if (currentDiagnosis == currentPatient.correctDiagnosis)
         {
             diagnosisNumber = (int)currentDiagnosis;
             diagnosisDisplay.text = PossibleDiagnosis[diagnosisNumber] + " is the correct diagnosis";
             currentPatient.diagnosed = true;
             currentPatient.submittedDiagnosis = currentDiagnosis;
+
+            FindObjectOfType<D_Audio_System>().PlayAudio("correct");
+
             return true;
         }
-        else if(currentDiagnosis != Diagnosis.Undiagnosed)
+        else if (currentDiagnosis != Diagnosis.Undiagnosed)
         {
             diagnosisNumber = (int)currentDiagnosis;
             diagnosisDisplay.text = PossibleDiagnosis[diagnosisNumber] + " is the incorrect diagnosis"; //Currently does not lock you out of correcting your mistake
+
+            FindObjectOfType<D_Audio_System>().PlayAudio("incorrect");
             //currentPatient.diagnosed = true;
             return false;
         }

@@ -29,7 +29,7 @@ public class R_PodMovementHandler : MonoBehaviour
 
     public void AssignPatients(List<R_Patient> newPatients)
     {
-        for(int i = 0; i < newPatients.Count; i++)
+        for (int i = 0; i < newPatients.Count; i++)
         {
             cryoPods[i].thisPatient = newPatients[i];
         }
@@ -38,7 +38,8 @@ public class R_PodMovementHandler : MonoBehaviour
 
     public void MoveLeft()
     {
-        if(currentActivePod > 0)
+        //play sound 
+        if (currentActivePod > 0)
         {
             moveQueue.Enqueue(MoveFromTo(false));
             currentActivePod--;
@@ -47,7 +48,8 @@ public class R_PodMovementHandler : MonoBehaviour
 
     public void MoveRight()
     {
-        if(currentActivePod < cryoPods.Count-1)
+        //play sound 
+        if (currentActivePod < cryoPods.Count - 1)
         {
             moveQueue.Enqueue(MoveFromTo(true));
             currentActivePod++;
@@ -67,7 +69,7 @@ public class R_PodMovementHandler : MonoBehaviour
         var t = 0f;
         Vector2 from = transform.localPosition;
         Vector2 to;
-        if(movingRight)
+        if (movingRight)
         {
             to = new Vector2(transform.localPosition.x - moveAmount, transform.localPosition.y);
         }
@@ -92,7 +94,7 @@ public class R_PodMovementHandler : MonoBehaviour
         {
             while (moveQueue.Count > 0)
                 if (moving != true) { yield return StartCoroutine(moveQueue.Dequeue()); }
-                yield return null;
+            yield return null;
             yield return null;
         }
     }

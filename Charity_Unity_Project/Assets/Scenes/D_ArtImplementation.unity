@@ -10298,7 +10298,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Apologies for the early awakening. \nThe ship has encuntered an unexpected
+  m_text: "Apologies for the early awakening. \nThe ship has encountered an unexpected
     meteor storm."
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: c9a2979535bed5a4a956c37c271e2ef9, type: 2}

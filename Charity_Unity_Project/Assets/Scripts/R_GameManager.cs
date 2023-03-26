@@ -7,6 +7,7 @@ public class R_GameManager : MonoBehaviour
     public R_ReportManager reportManager;
     public R_PatientManager patientManager;
     public R_ScoreManager scoreManager;
+    private int roundNum;
 
     //Function to change active patient
     private void Start()
@@ -21,6 +22,12 @@ public class R_GameManager : MonoBehaviour
         {
             if(reportManager.SubmitDiagnosis(patientManager.activePatients[patientManager.currentActivePatientNum]) == true)
             {
+                patientManager.patientsCompleted++;
+                if(patientManager.patientsCompleted >= patientManager.activePatients.Count) 
+                {
+                    roundNum++;
+                    patientManager.newPatientSet((int)(1 + roundNum/3)); 
+                }
                 CallScoreIncrease(1f);
             }
         }

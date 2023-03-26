@@ -10,6 +10,7 @@ public class R_PatientManager : MonoBehaviour
     public R_PatientData IrregularPatientData;
 
     public int PatientNumberPerRound = 6;
+    [HideInInspector] public int patientsCompleted = 0;
 
     public List<R_Patient> activePatients; //List of the currently active list of patients
     public int currentActivePatientNum;
@@ -23,7 +24,8 @@ public class R_PatientManager : MonoBehaviour
     //Function to randomly assign how many patients from each list to add to the active patient list
     public void newPatientSet(int numOfIrregular)
     {
-        for(int i = 0; i < numOfIrregular; i++)
+        patientsCompleted = 0;
+        for (int i = 0; i < numOfIrregular; i++)
         {
             int patient = Random.Range(0, IrregularPatientData.AllPatients.Count);
             R_Patient newPatient = new R_Patient();

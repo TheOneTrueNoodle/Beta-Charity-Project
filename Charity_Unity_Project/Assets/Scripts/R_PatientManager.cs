@@ -15,12 +15,6 @@ public class R_PatientManager : MonoBehaviour
     public List<R_Patient> activePatients; //List of the currently active list of patients
     public int currentActivePatientNum;
 
-    //Load patient data randomly from massive data of stuff
-    private void Update()
-    {
-        //currentActivePatientNum = podMovementHandler.currentActivePod;
-    }
-
     //Function to randomly assign how many patients from each list to add to the active patient list
     public void newPatientSet(int numOfIrregular)
     {

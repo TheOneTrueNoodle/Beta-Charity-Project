@@ -66,6 +66,7 @@ public class R_ReportManager : MonoBehaviour
         }
         else if (currentDiagnosis == currentPatient.correctDiagnosis)
         {
+            changeDiagnosis(0);
             diagnosisNumber = (int)currentDiagnosis;
             diagnosisDisplay.text = PossibleDiagnosis[diagnosisNumber] + " is the correct diagnosis";
             currentPatient.diagnosed = true;

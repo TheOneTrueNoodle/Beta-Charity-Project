@@ -13,7 +13,7 @@ public class R_ScoreManager : MonoBehaviour
     public int DisplayedScore;
     public int increaseRate;
 
-    private void Update()
+    public void checkScore()
     {
         if (DisplayedScore < Score) { animateScore(); }
     }

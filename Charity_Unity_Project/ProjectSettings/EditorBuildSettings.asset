@@ -9,6 +9,9 @@ EditorBuildSettings:
     path: Assets/Scenes/Menu.unity
     guid: 4f93432113470a3458f5dcb598d812d4
   - enabled: 1
+    path: Assets/Scenes/D_ArtImplementation.unity
+    guid: f0d6e39638fb70e4eb9bd3d43afbb8ea
+  - enabled: 0
     path: Assets/Scenes/R_GameplayTest.unity
     guid: 52932a897f298994daebcf666f4174c2
   m_configObjects: {}

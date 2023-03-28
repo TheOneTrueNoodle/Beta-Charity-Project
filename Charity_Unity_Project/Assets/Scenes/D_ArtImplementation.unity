@@ -11162,6 +11162,30 @@ MonoBehaviour:
           m_StringArgument: button back
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 792747662}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 595127703}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
 --- !u!114 &1020268004
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -17841,6 +17865,30 @@ MonoBehaviour:
           m_StringArgument: item select
           m_BoolArgument: 1
         m_CallState: 2
+      - m_Target: {fileID: 792747662}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 595127703}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1646172163
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -18739,6 +18787,30 @@ MonoBehaviour:
           m_StringArgument: item select
           m_BoolArgument: 1
         m_CallState: 2
+      - m_Target: {fileID: 792747662}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 595127703}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1705905702
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -19425,6 +19497,22 @@ PrefabInstance:
     - target: {fileID: 1825278160864030280, guid: 45644e09b59c6a145a30f04ae0fa047f, type: 3}
       propertyPath: m_Name
       value: AudioSystem
+      objectReference: {fileID: 0}
+    - target: {fileID: 1825278160864030281, guid: 45644e09b59c6a145a30f04ae0fa047f, type: 3}
+      propertyPath: Sounds.Array.size
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 1825278160864030281, guid: 45644e09b59c6a145a30f04ae0fa047f, type: 3}
+      propertyPath: Sounds.Array.data[7]
+      value: 
+      objectReference: {fileID: 8300000, guid: a140f9f87c8eab241a26f6cc4bce6237, type: 3}
+    - target: {fileID: 1825278160864030281, guid: 45644e09b59c6a145a30f04ae0fa047f, type: 3}
+      propertyPath: SoundNames.Array.size
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 1825278160864030281, guid: 45644e09b59c6a145a30f04ae0fa047f, type: 3}
+      propertyPath: SoundNames.Array.data[7]
+      value: bgAmbience
       objectReference: {fileID: 0}
     - target: {fileID: 1825278160864030282, guid: 45644e09b59c6a145a30f04ae0fa047f, type: 3}
       propertyPath: m_RootOrder
@@ -21306,7 +21394,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: -152.39998}
+  m_AnchoredPosition: {x: 0, y: -152.4}
   m_SizeDelta: {x: -37, y: -315.49}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1991409076
@@ -22170,7 +22258,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &2077032901
 MonoBehaviour:
   m_ObjectHideFlags: 0

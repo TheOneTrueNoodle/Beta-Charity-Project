@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class R_PatientManager : MonoBehaviour
 {
@@ -14,6 +15,12 @@ public class R_PatientManager : MonoBehaviour
 
     public List<R_Patient> activePatients; //List of the currently active list of patients
     public int currentActivePatientNum;
+
+    [Header("Patient Information Display Variables")]
+    [SerializeField] private TMP_Text nameDisp;
+    [SerializeField] private TMP_Text ageDisp;
+    [SerializeField] private TMP_Text genderDisp;
+
 
     //Function to randomly assign how many patients from each list to add to the active patient list
     public void newPatientSet(int numOfIrregular)
@@ -61,5 +68,29 @@ public class R_PatientManager : MonoBehaviour
             inputList[rand] = temp;
         }
         podMovementHandler.AssignPatients(activePatients);
+        changeDisplays();
+    }
+
+    public void MovePodsLeft()
+    {
+        if(currentActivePatientNum > 0)
+        {
+            currentActivePatientNum--;
+            podMovementHandler.MoveLeft(currentActivePatientNum);
+        }
+    }
+    public void MovePodsRight()
+    {
+        if (currentActivePatientNum < activePatients.Count - 1)
+        {
+            currentActivePatientNum++;
+            podMovementHandler.MoveRight(currentActivePatientNum);
+        }
+    }
+    public void changeDisplays()
+    {
+        nameDisp.text = "Name: " + activePatients[currentActivePatientNum].patientName;
+        ageDisp.text = "Age: " + activePatients[currentActivePatientNum].patientAge.ToString();
+        genderDisp.text = "Bio Sex: " + activePatients[currentActivePatientNum].patientBioGender;
     }
 }

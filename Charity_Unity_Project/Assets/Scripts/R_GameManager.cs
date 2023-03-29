@@ -43,15 +43,22 @@ public class R_GameManager : MonoBehaviour
                 }
 
                 CallScoreIncrease(1f);
-
-
             }
+        }
+        else
+        {
+            CallResetStreak();
         }
     }
 
     public void CallScoreIncrease(float modifier)
     {
         scoreManager.IncreaseScore(modifier);
+    }
+
+    private void CallResetStreak()
+    {
+        scoreManager.ResetStreak();
     }
 
     private void manageTimer()

@@ -1,7 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using TMPro;
 
 public class R_PodMovementHandlerCarousel : MonoBehaviour
 {
@@ -16,12 +15,6 @@ public class R_PodMovementHandlerCarousel : MonoBehaviour
     private Queue<IEnumerator> moveQueue = new Queue<IEnumerator>();
     [SerializeField] private float moveDelay = 1f;
     private bool moving;
-
-    [Header("Patient Information Display Variables")]
-    [SerializeField] private TMP_Text nameDisp;
-    [SerializeField] private TMP_Text ageDisp;
-    [SerializeField] private TMP_Text genderDisp;
-
 
     private void Start()
     {
@@ -39,29 +32,24 @@ public class R_PodMovementHandlerCarousel : MonoBehaviour
         {
             cryoPods[i].thisPatient = newPatients[i];
         }
-        changeDisplays();
     }
 
-    public void MoveLeft()
+    public void MoveLeft(int newActivePod)
     {
-        if (currentActivePod > 0)
-        {
-            //moveQueue.Enqueue(MoveFromTo(false));
-            moveQueue.Enqueue(CarouselMovement());
-            currentActivePod--;
-            ReorderPods();
-        }
+        currentActivePod = newActivePod;
+
+        //moveQueue.Enqueue(MoveFromTo(false));
+        moveQueue.Enqueue(CarouselMovement());
+        ReorderPods();
     }
 
-    public void MoveRight()
+    public void MoveRight(int newActivePod)
     {
-        if (currentActivePod < cryoPods.Count - 1)
-        {
-            //moveQueue.Enqueue(MoveFromTo(true));
-            moveQueue.Enqueue(CarouselMovement());
-            currentActivePod++;
-            ReorderPods();
-        }
+        currentActivePod = newActivePod;
+
+        //moveQueue.Enqueue(MoveFromTo(true));
+        moveQueue.Enqueue(CarouselMovement());
+        ReorderPods();
     }
 
     private void ReorderPods()
@@ -85,12 +73,7 @@ public class R_PodMovementHandlerCarousel : MonoBehaviour
         }
     }
 
-    private void changeDisplays()
-    {
-        nameDisp.text = "Name: " + cryoPods[currentActivePod].thisPatient.patientName;
-        ageDisp.text = "Age: " + cryoPods[currentActivePod].thisPatient.patientAge.ToString();
-        genderDisp.text = "Bio Sex: " + cryoPods[currentActivePod].thisPatient.patientBioGender;
-    }
+    
 
     IEnumerator CarouselMovement()
     {
@@ -180,7 +163,7 @@ public class R_PodMovementHandlerCarousel : MonoBehaviour
             yield return null;
         }
         moving = false;
-        changeDisplays();
+        patientManager.changeDisplays();
         yield return null;
     }
 

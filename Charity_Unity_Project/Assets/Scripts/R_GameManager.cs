@@ -15,6 +15,10 @@ public class R_GameManager : MonoBehaviour
     private bool TimerOn = true;
     public TMP_Text TimerText;
 
+    public List<GameObject> LivesObjects;
+    public int Lives = 3;
+    private int restoreLifeStreak;
+
     //Function to change active patient
     private void Start()
     {
@@ -43,11 +47,24 @@ public class R_GameManager : MonoBehaviour
                 }
 
                 CallScoreIncrease(1f);
+                if (Lives < 3)
+                {
+                    restoreLifeStreak++;
+                    if(restoreLifeStreak == 5)
+                    {
+                        restoreLifeStreak = 0;
+                        Lives++;
+                        updateLivesDisplay();
+                    }
+                }
             }
-        }
-        else
-        {
-            CallResetStreak();
+            else
+            {
+                Lives--;
+                if (Lives <= 0) { endRun(); }
+                updateLivesDisplay();
+                CallResetStreak();
+            }
         }
     }
 
@@ -77,7 +94,7 @@ public class R_GameManager : MonoBehaviour
         }
     }
 
-    void updateTimer(float currentTime)
+    private void updateTimer(float currentTime)
     {
         currentTime += 1;
 
@@ -85,5 +102,20 @@ public class R_GameManager : MonoBehaviour
         float seconds = Mathf.FloorToInt(currentTime % 60);
 
         TimerText.text = string.Format("{0:00} : {1:00}", minutes, seconds);
+    }
+
+    private void updateLivesDisplay()
+    {
+        if(LivesObjects.Count < 3) { return; }
+        for(int i = 0; i < LivesObjects.Count; i++)
+        {
+            if(i + 1 <= Lives) { LivesObjects[i].SetActive(true); }
+            else { LivesObjects[i].SetActive(false); }
+        }
+    }
+
+    private void endRun()
+    {
+        Debug.Log("GAME OVER RUN HAS ENDED");
     }
 }

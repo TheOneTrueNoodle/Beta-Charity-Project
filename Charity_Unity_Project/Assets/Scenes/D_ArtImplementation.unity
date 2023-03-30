@@ -17929,6 +17929,7 @@ MonoBehaviour:
   nameDisp: {fileID: 1274259954}
   ageDisp: {fileID: 1308035518}
   genderDisp: {fileID: 610339353}
+  ECGDisp: {fileID: 1527216113}
 --- !u!4 &1349369883
 Transform:
   m_ObjectHideFlags: 0
@@ -19988,7 +19989,7 @@ GameObject:
   - component: {fileID: 1527216114}
   - component: {fileID: 1527216113}
   m_Layer: 0
-  m_Name: ECG1
+  m_Name: ECG Display
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

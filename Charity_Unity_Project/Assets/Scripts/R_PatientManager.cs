@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using UnityEngine.UI;
 
 public class R_PatientManager : MonoBehaviour
 {
@@ -20,6 +21,7 @@ public class R_PatientManager : MonoBehaviour
     [SerializeField] private TMP_Text nameDisp;
     [SerializeField] private TMP_Text ageDisp;
     [SerializeField] private TMP_Text genderDisp;
+    [SerializeField] private RawImage ECGDisp;
 
 
     //Function to randomly assign how many patients from each list to add to the active patient list
@@ -92,5 +94,6 @@ public class R_PatientManager : MonoBehaviour
         nameDisp.text = "Name: " + activePatients[currentActivePatientNum].patientName;
         ageDisp.text = "Age: " + activePatients[currentActivePatientNum].patientAge.ToString();
         genderDisp.text = "Bio Sex: " + activePatients[currentActivePatientNum].patientBioGender;
+        ECGDisp.texture = activePatients[currentActivePatientNum].ECG_GraphSprite;
     }
 }

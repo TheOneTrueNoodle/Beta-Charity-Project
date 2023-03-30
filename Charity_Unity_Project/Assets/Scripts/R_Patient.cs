@@ -11,7 +11,7 @@ public class R_Patient
     public int patientAge;
     public string patientBioGender;
 
-    public Sprite ECG_GraphSprite;
+    public Texture ECG_GraphSprite;
     public Diagnosis correctDiagnosis;
     [HideInInspector] public Diagnosis submittedDiagnosis;
 }

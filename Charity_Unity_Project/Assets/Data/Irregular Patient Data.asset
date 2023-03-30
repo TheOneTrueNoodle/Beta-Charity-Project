@@ -14,16 +14,37 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   AllPatients:
   - diagnosed: 0
-    patientName: Billy
+    patientName: E1
     patientAge: 28
     patientBioGender: Male
-    ECG_GraphSprite: {fileID: 0}
-    correctDiagnosis: 14
+    ECG_GraphSprite: {fileID: 21300000, guid: 20a3cbe6f4a27d543995dd60be38a190, type: 3}
+    correctDiagnosis: 13
     submittedDiagnosis: 14
   - diagnosed: 0
-    patientName: Sandra
+    patientName: E4
     patientAge: 47
     patientBioGender: Female
-    ECG_GraphSprite: {fileID: 0}
-    correctDiagnosis: 10
+    ECG_GraphSprite: {fileID: 21300000, guid: e842b727935b5654cb3cbc1cc1bea04a, type: 3}
+    correctDiagnosis: 13
+    submittedDiagnosis: 0
+  - diagnosed: 0
+    patientName: G2
+    patientAge: 47
+    patientBioGender: Female
+    ECG_GraphSprite: {fileID: 21300000, guid: 34e2d57943f44c24c891fab42f8fe18a, type: 3}
+    correctDiagnosis: 12
+    submittedDiagnosis: 0
+  - diagnosed: 0
+    patientName: G6
+    patientAge: 47
+    patientBioGender: Female
+    ECG_GraphSprite: {fileID: 21300000, guid: 50c9a76f5ac6a604ebc2f3c87c66615d, type: 3}
+    correctDiagnosis: 13
+    submittedDiagnosis: 0
+  - diagnosed: 0
+    patientName: J2
+    patientAge: 47
+    patientBioGender: Female
+    ECG_GraphSprite: {fileID: 21300000, guid: df752c6c704d2314d90ba3dd625d2774, type: 3}
+    correctDiagnosis: 15
     submittedDiagnosis: 0

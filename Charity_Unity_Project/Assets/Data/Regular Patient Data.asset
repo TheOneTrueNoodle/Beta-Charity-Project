@@ -14,16 +14,86 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   AllPatients:
   - diagnosed: 0
-    patientName: Conor
+    patientName: E6
     patientAge: 18
     patientBioGender: Male
-    ECG_GraphSprite: {fileID: 0}
-    correctDiagnosis: 1
+    ECG_GraphSprite: {fileID: 21300000, guid: 1401cefe219da8f44985fb5f0094692e, type: 3}
+    correctDiagnosis: 2
     submittedDiagnosis: 1
   - diagnosed: 0
-    patientName: Amber
+    patientName: F4
     patientAge: 23
     patientBioGender: Female
-    ECG_GraphSprite: {fileID: 0}
-    correctDiagnosis: 2
+    ECG_GraphSprite: {fileID: 21300000, guid: b14ca325cf399ba45bdcec57b7eeff0c, type: 3}
+    correctDiagnosis: 8
+    submittedDiagnosis: 2
+  - diagnosed: 0
+    patientName: F7 - SVT
+    patientAge: 23
+    patientBioGender: Female
+    ECG_GraphSprite: {fileID: 21300000, guid: 5cc4dbefaff6e104193e806686e653c8, type: 3}
+    correctDiagnosis: 0
+    submittedDiagnosis: 2
+  - diagnosed: 0
+    patientName: F8 - SVT
+    patientAge: 23
+    patientBioGender: Female
+    ECG_GraphSprite: {fileID: 21300000, guid: aca545913ece96a48a40c5d089f4b20d, type: 3}
+    correctDiagnosis: 0
+    submittedDiagnosis: 2
+  - diagnosed: 0
+    patientName: G1
+    patientAge: 23
+    patientBioGender: Male
+    ECG_GraphSprite: {fileID: 21300000, guid: cf7e7ddc3efb963409c3fabb389891b6, type: 3}
+    correctDiagnosis: 3
+    submittedDiagnosis: 2
+  - diagnosed: 0
+    patientName: G3
+    patientAge: 23
+    patientBioGender: Male
+    ECG_GraphSprite: {fileID: 21300000, guid: 69904faba2a242945b5c320804c129d9, type: 3}
+    correctDiagnosis: 3
+    submittedDiagnosis: 2
+  - diagnosed: 0
+    patientName: G4
+    patientAge: 23
+    patientBioGender: Male
+    ECG_GraphSprite: {fileID: 21300000, guid: 1c732a718f6eb484f9441ae26aebb33f, type: 3}
+    correctDiagnosis: 4
+    submittedDiagnosis: 2
+  - diagnosed: 0
+    patientName: G5
+    patientAge: 23
+    patientBioGender: Male
+    ECG_GraphSprite: {fileID: 21300000, guid: cd0a753e9c5ef064fb348c891d105678, type: 3}
+    correctDiagnosis: 4
+    submittedDiagnosis: 2
+  - diagnosed: 0
+    patientName: G7
+    patientAge: 23
+    patientBioGender: Male
+    ECG_GraphSprite: {fileID: 21300000, guid: e3dc54c48721d2547a8d99ee23457824, type: 3}
+    correctDiagnosis: 3
+    submittedDiagnosis: 2
+  - diagnosed: 0
+    patientName: J3
+    patientAge: 23
+    patientBioGender: Male
+    ECG_GraphSprite: {fileID: 21300000, guid: 8f2ffa6897c990c4ba97feaeea315f80, type: 3}
+    correctDiagnosis: 1
+    submittedDiagnosis: 2
+  - diagnosed: 0
+    patientName: K2
+    patientAge: 23
+    patientBioGender: Male
+    ECG_GraphSprite: {fileID: 21300000, guid: ffe885ddc9abfab4eb6b74e34e962f10, type: 3}
+    correctDiagnosis: 1
+    submittedDiagnosis: 2
+  - diagnosed: 0
+    patientName: K4
+    patientAge: 23
+    patientBioGender: Male
+    ECG_GraphSprite: {fileID: 21300000, guid: 12aea45e2b1a7bc408e605e1f405e701, type: 3}
+    correctDiagnosis: 1
     submittedDiagnosis: 2

@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using UnityEngine.SceneManagement;
 
 public class R_GameManager : MonoBehaviour
 {
@@ -12,18 +13,32 @@ public class R_GameManager : MonoBehaviour
 
     public float StartTime;
     private float TimeLeft;
-    private bool TimerOn = true;
+    public bool TimerOn = false;
     public TMP_Text TimerText;
 
     public List<GameObject> LivesObjects;
     public int Lives = 3;
     private int restoreLifeStreak;
 
+    //Post Game Data
+    [Header("Report Card Variables")]
+    public GameObject DisplayCanvas;
+    public TMP_Text GameEndReasonDisp;
+    public TMP_Text FinalScoreDisp;
+    public TMP_Text LongestStreakDisp;
+    public TMP_Text CorrectPatientsDisp;
+    public TMP_Text WrongAnswersDisp;
+    private string GameEndReason;
+    private int patientsComplete;
+    private int longestStreak;
+    private int wrongAnswerAmount;
+
     //Function to change active patient
     private void Start()
     {
         patientManager.newPatientSet(1);
         TimeLeft = StartTime;
+        TimerOn = false;
     }
 
     private void Update()
@@ -39,6 +54,7 @@ public class R_GameManager : MonoBehaviour
         {
             if(reportManager.SubmitDiagnosis(patientManager.activePatients[patientManager.currentActivePatientNum]) == true)
             {
+                patientsComplete++;
                 patientManager.patientsCompleted++;
                 if(patientManager.patientsCompleted >= patientManager.activePatients.Count) 
                 {
@@ -61,7 +77,8 @@ public class R_GameManager : MonoBehaviour
             else
             {
                 Lives--;
-                if (Lives <= 0) { endRun(); }
+                wrongAnswerAmount++;
+                if (Lives <= 0) { endRun(0); }
                 updateLivesDisplay();
                 CallResetStreak();
             }
@@ -90,6 +107,7 @@ public class R_GameManager : MonoBehaviour
             else
             {
                 TimeLeft = 0;
+                endRun(1);
             }
         }
     }
@@ -114,8 +132,23 @@ public class R_GameManager : MonoBehaviour
         }
     }
 
-    private void endRun()
+    private void endRun(int cause)
     {
         Debug.Log("GAME OVER RUN HAS ENDED");
+        if (cause == 0) { GameEndReason = "You ran out of lives"; }
+        else { GameEndReason = "You ran out of time"; }
+        longestStreak = scoreManager.highestStreak;
+
+        DisplayCanvas.SetActive(true);
+        GameEndReasonDisp.text = GameEndReason;
+        FinalScoreDisp.text = scoreManager.Score.ToString();
+        LongestStreakDisp.text = longestStreak.ToString();
+        CorrectPatientsDisp.text = patientsComplete.ToString();
+        WrongAnswersDisp.text = wrongAnswerAmount.ToString();
+    }
+
+    public void ResetGame()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 }

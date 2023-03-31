@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1825278160864030282}
   - component: {fileID: 1825278160864030281}
+  - component: {fileID: 952720098}
   m_Layer: 0
   m_Name: AudioSystem
   m_TagString: Untagged
@@ -44,6 +45,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c4eb3c16f4fce8a4d8c806e4a590f0c9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isInGame: 1
+  randomSoundLikleyHood: 50
   Sounds:
   - {fileID: 8300000, guid: 04952082510e11845ae12c914c3df6db, type: 3}
   - {fileID: 8300000, guid: ac346e80ae3bde947a2bf8b8f3bb534f, type: 3}
@@ -52,6 +55,10 @@ MonoBehaviour:
   - {fileID: 8300000, guid: ba25f73eab43ee34aadcc98623bcd021, type: 3}
   - {fileID: 8300000, guid: 41f8b59a4210ff24fb41990ab643369b, type: 3}
   - {fileID: 8300000, guid: c784cf9b186e02b45a5e5ff696827079, type: 3}
+  - {fileID: 8300000, guid: e772075d9eb75f54d9f811c1b363b596, type: 3}
+  - {fileID: 8300000, guid: ec199be94a1419b49866e4d684f0ebc5, type: 3}
+  - {fileID: 8300000, guid: 2ee8c0494bef8dc4a988622d2142d95f, type: 3}
+  - {fileID: 8300000, guid: a140f9f87c8eab241a26f6cc4bce6237, type: 3}
   SoundNames:
   - button press
   - button back
@@ -60,3 +67,115 @@ MonoBehaviour:
   - remove diagnosis
   - correct
   - incorrect
+  - game start
+  - click
+  - music
+  - ambience1
+  SoundVolume:
+  - 1
+  - 1
+  - 1
+  - 0.2
+  - 1
+  - 1
+  - 1
+  - 1
+  - 0.1
+  - 0.2
+  - 1
+--- !u!82 &952720098
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1825278160864030280}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: f7183ee5f49ba05409af43ff3eac3793, type: 3}
+  m_PlayOnAwake: 1
+  m_Volume: 0.374
+  m_Pitch: 1
+  Loop: 1
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4

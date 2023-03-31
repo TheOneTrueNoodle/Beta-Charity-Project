@@ -4,9 +4,37 @@ using UnityEngine;
 
 public class D_Audio_System : MonoBehaviour
 {
+    public bool isInGame;
+
+    [Range(0, 100)]
+    public float randomSoundLikleyHood = 50;
+
     public List<AudioClip> Sounds = new List<AudioClip>();
     public List<string> SoundNames = new List<string>();
+    public List<float> SoundVolume = new List<float>();
 
+
+
+    void Start()
+    {
+        if (isInGame)
+        {
+            PlayAudio("game start");
+            PlayAudio("ambience");
+        }
+
+        PlayAudio("music");
+
+        InvokeRepeating("playAmbientAudio", 10, 10);
+    }
+
+    void playAbmientAudio()
+    {
+        if (Random.Range(0, 100) <= randomSoundLikleyHood)
+        {
+            PlayAudio("ambience1");
+        }
+    }
 
     public void PlayAudio(string name)//, bool randomness, float specificPitch)
     {
@@ -34,9 +62,14 @@ public class D_Audio_System : MonoBehaviour
             if (SoundNames[i] == name)
             {
                 soundPlayerSource.clip = Sounds[i];//...assign the clip 
+                soundPlayerSource.volume = SoundVolume[i];//and set its volume
                 hasFoundSound = true;
+
+                Debug.Log(name);
             }
         }
+
+
 
         if (!hasFoundSound)//if the sound aint there then give an error and stop the script here
         {
@@ -46,7 +79,8 @@ public class D_Audio_System : MonoBehaviour
 
         //play the ting then delete the ting 2 sec later.
         soundPlayerSource.Play();
-        Destroy(soundPlayer, 2f);
+        if (name != "music") //|| name != "ambient")
+            Destroy(soundPlayer, 2f);
 
     }
 }

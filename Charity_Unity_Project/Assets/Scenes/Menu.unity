@@ -1775,7 +1775,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Ciar\xE1n Honer"
+  m_text: 
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: c9a2979535bed5a4a956c37c271e2ef9, type: 2}
   m_sharedMaterial: {fileID: 367834684120109401, guid: c9a2979535bed5a4a956c37c271e2ef9, type: 2}
@@ -1802,7 +1802,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 26
+  m_fontSize: 36
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -2023,7 +2023,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: BIGV Cooke
+  m_text: Declan Cooke
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: c9a2979535bed5a4a956c37c271e2ef9, type: 2}
   m_sharedMaterial: {fileID: 367834684120109401, guid: c9a2979535bed5a4a956c37c271e2ef9, type: 2}
@@ -3514,7 +3514,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1751552986}
   m_HandleRect: {fileID: 1751552985}
   m_Direction: 0
-  m_Value: 1
+  m_Value: 0
   m_Size: 1
   m_NumberOfSteps: 0
   m_OnValueChanged:
@@ -4126,7 +4126,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: like everyone ngl
+  m_text: "Ciar\xE1n Honer"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: c9a2979535bed5a4a956c37c271e2ef9, type: 2}
   m_sharedMaterial: {fileID: 367834684120109401, guid: c9a2979535bed5a4a956c37c271e2ef9, type: 2}
@@ -4153,7 +4153,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 27.65
+  m_fontSize: 26
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -6544,7 +6544,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -21.507889, y: 217.6}
+  m_AnchoredPosition: {x: -40, y: 134.97}
   m_SizeDelta: {x: 315.4187, y: 113.28}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1122937901
@@ -7726,8 +7726,8 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1920550063}
   m_HandleRect: {fileID: 1920550062}
   m_Direction: 2
-  m_Value: -0.00000032532446
-  m_Size: 0.34557128
+  m_Value: -0.0000060727234
+  m_Size: 0.34616372
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -7976,7 +7976,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -0.000030517578, y: 844.25946}
+  m_AnchoredPosition: {x: -0.000030517578, y: 844.2644}
   m_SizeDelta: {x: 0, y: 1291.2593}
   m_Pivot: {x: 0, y: 1}
 --- !u!1 &1345046400
@@ -8953,8 +8953,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 230}
-  m_SizeDelta: {x: 755.0288, y: 86.0408}
+  m_AnchoredPosition: {x: 0, y: 260}
+  m_SizeDelta: {x: 827.5173, y: 136.7828}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1623611599
 MonoBehaviour:
@@ -8976,7 +8976,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Pulse Pilot
+  m_text: Rhythm Deck of The USS Einthoven
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: c9a2979535bed5a4a956c37c271e2ef9, type: 2}
   m_sharedMaterial: {fileID: 367834684120109401, guid: c9a2979535bed5a4a956c37c271e2ef9, type: 2}
@@ -9003,7 +9003,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 81.9
+  m_fontSize: 64.35
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1

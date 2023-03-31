@@ -13,5 +13,5 @@ public class R_Patient
 
     public Texture ECG_GraphSprite;
     public Diagnosis correctDiagnosis;
-    [HideInInspector] public Diagnosis submittedDiagnosis;
+    public Diagnosis submittedDiagnosis;
 }

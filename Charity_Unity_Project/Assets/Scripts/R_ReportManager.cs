@@ -60,6 +60,7 @@ public class R_ReportManager : MonoBehaviour
         int diagnosisNumber;
         if (currentPatient.diagnosed == true)
         {
+            Debug.Log("Patient is diagnosed");
             diagnosisNumber = (int)currentPatient.submittedDiagnosis;
             diagnosisDisplay.text = "This patient has already been diagnosed with " + PossibleDiagnosis[diagnosisNumber];
             return false;

@@ -50,38 +50,35 @@ public class R_GameManager : MonoBehaviour
     public void enterPatientDiagnosis()
     {
         Debug.Log("entered diagnosis");
-        if(patientManager.activePatients[patientManager.currentActivePatientNum].diagnosed != true)
+        if (reportManager.SubmitDiagnosis(patientManager.activePatients[patientManager.currentActivePatientNum]) == true)
         {
-            if(reportManager.SubmitDiagnosis(patientManager.activePatients[patientManager.currentActivePatientNum]) == true)
+            patientsComplete++;
+            patientManager.patientsCompleted++;
+            if (patientManager.patientsCompleted >= patientManager.activePatients.Count)
             {
-                patientsComplete++;
-                patientManager.patientsCompleted++;
-                if(patientManager.patientsCompleted >= patientManager.activePatients.Count) 
-                {
-                    roundNum++;
-                    patientManager.newPatientSet((int)(1 + roundNum/3)); 
-                }
+                roundNum++;
+                patientManager.newPatientSet((int)(1 + roundNum / 3));
+            }
 
-                CallScoreIncrease(1f);
-                if (Lives < 3)
+            CallScoreIncrease(1f);
+            if (Lives < 3)
+            {
+                restoreLifeStreak++;
+                if (restoreLifeStreak == 5)
                 {
-                    restoreLifeStreak++;
-                    if(restoreLifeStreak == 5)
-                    {
-                        restoreLifeStreak = 0;
-                        Lives++;
-                        updateLivesDisplay();
-                    }
+                    restoreLifeStreak = 0;
+                    Lives++;
+                    updateLivesDisplay();
                 }
             }
-            else
-            {
-                Lives--;
-                wrongAnswerAmount++;
-                if (Lives <= 0) { endRun(0); }
-                updateLivesDisplay();
-                CallResetStreak();
-            }
+        }
+        else if (patientManager.activePatients[patientManager.currentActivePatientNum].diagnosed != true
+        {
+            Lives--;
+            wrongAnswerAmount++;
+            if (Lives <= 0) { endRun(0); }
+            updateLivesDisplay();
+            CallResetStreak();
         }
     }
 
@@ -97,7 +94,7 @@ public class R_GameManager : MonoBehaviour
 
     private void manageTimer()
     {
-        if(TimerOn)
+        if (TimerOn)
         {
             if (TimeLeft > 0)
             {
@@ -124,10 +121,10 @@ public class R_GameManager : MonoBehaviour
 
     private void updateLivesDisplay()
     {
-        if(LivesObjects.Count < 3) { return; }
-        for(int i = 0; i < LivesObjects.Count; i++)
+        if (LivesObjects.Count < 3) { return; }
+        for (int i = 0; i < LivesObjects.Count; i++)
         {
-            if(i + 1 <= Lives) { LivesObjects[i].SetActive(true); }
+            if (i + 1 <= Lives) { LivesObjects[i].SetActive(true); }
             else { LivesObjects[i].SetActive(false); }
         }
     }

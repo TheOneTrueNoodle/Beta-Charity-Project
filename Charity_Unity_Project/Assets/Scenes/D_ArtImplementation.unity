@@ -11309,9 +11309,9 @@ MonoBehaviour:
   TimerOn: 1
   TimerText: {fileID: 660070903}
   LivesObjects:
-  - {fileID: 294795529}
-  - {fileID: 1478217794}
-  - {fileID: 413958414}
+  - {fileID: 1729131148}
+  - {fileID: 293778065}
+  - {fileID: 2142470403}
   Lives: 3
   DisplayCanvas: {fileID: 1909560505}
   GameEndReasonDisp: {fileID: 443809206}
@@ -19473,10 +19473,10 @@ MonoBehaviour:
   patientsCompleted: 0
   activePatients: []
   currentActivePatientNum: 0
-  nameDisp: {fileID: 1274259954}
-  ageDisp: {fileID: 1308035518}
-  genderDisp: {fileID: 610339353}
-  ECGDisp: {fileID: 1527216113}
+  nameDisp: {fileID: 37282248}
+  ageDisp: {fileID: 365714129}
+  genderDisp: {fileID: 1907147366}
+  ECGDisp: {fileID: 1624779058}
 --- !u!4 &1349369883
 Transform:
   m_ObjectHideFlags: 0

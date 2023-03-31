@@ -28,6 +28,7 @@ public class R_PatientManager : MonoBehaviour
     public void newPatientSet(int numOfIrregular)
     {
         patientsCompleted = 0;
+        activePatients.Clear();
         for (int i = 0; i < numOfIrregular; i++)
         {
             int patient = Random.Range(0, IrregularPatientData.AllPatients.Count);

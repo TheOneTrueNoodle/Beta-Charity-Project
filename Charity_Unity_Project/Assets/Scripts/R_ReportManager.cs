@@ -66,13 +66,13 @@ public class R_ReportManager : MonoBehaviour
         }
         else if (currentDiagnosis == currentPatient.correctDiagnosis)
         {
-            changeDiagnosis(0);
             diagnosisNumber = (int)currentDiagnosis;
             diagnosisDisplay.text = PossibleDiagnosis[diagnosisNumber] + " is the correct diagnosis";
             currentPatient.diagnosed = true;
             currentPatient.submittedDiagnosis = currentDiagnosis;
 
             FindObjectOfType<D_Audio_System>().PlayAudio("correct");
+            currentDiagnosis = 0;
 
             return true;
         }

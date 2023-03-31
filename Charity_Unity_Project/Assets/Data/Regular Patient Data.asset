@@ -28,20 +28,6 @@ MonoBehaviour:
     correctDiagnosis: 8
     submittedDiagnosis: 2
   - diagnosed: 0
-    patientName: F7 - SVT
-    patientAge: 23
-    patientBioGender: Female
-    ECG_GraphSprite: {fileID: 2800000, guid: 5cc4dbefaff6e104193e806686e653c8, type: 3}
-    correctDiagnosis: 0
-    submittedDiagnosis: 2
-  - diagnosed: 0
-    patientName: F8 - SVT
-    patientAge: 23
-    patientBioGender: Female
-    ECG_GraphSprite: {fileID: 2800000, guid: aca545913ece96a48a40c5d089f4b20d, type: 3}
-    correctDiagnosis: 0
-    submittedDiagnosis: 2
-  - diagnosed: 0
     patientName: G1
     patientAge: 23
     patientBioGender: Male

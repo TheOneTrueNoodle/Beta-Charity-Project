@@ -9,7 +9,9 @@ public class R_CutsceneManager : MonoBehaviour
     public Animator animator1;
     public Animator animator2;
     public Animator animator3;
-
+    public GameObject TestCanvasSkipCutscene;
+    public GameObject LivesGame;
+    public GameObject HeartMonitorGame;
     private Animation currentAnim;
 
     private bool isPlaying;
@@ -44,6 +46,12 @@ public class R_CutsceneManager : MonoBehaviour
             animator2.Play("Wait");
             animator3.Play("Wait");
             gameManager.TimerOn = true;
+            TestCanvasSkipCutscene.gameObject.SetActive(false);
+            LivesGame.gameObject.SetActive(true);
+            HeartMonitorGame.gameObject.SetActive(true);
+
+            
+
         }
     }
 }

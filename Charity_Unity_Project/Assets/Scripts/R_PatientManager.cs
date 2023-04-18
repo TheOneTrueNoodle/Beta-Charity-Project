@@ -81,6 +81,11 @@ public class R_PatientManager : MonoBehaviour
             currentActivePatientNum--;
             podMovementHandler.MoveLeft(currentActivePatientNum);
         }
+        else if(currentActivePatientNum <= 0)
+        {
+            currentActivePatientNum = activePatients.Count - 1;
+            podMovementHandler.MoveLeft(currentActivePatientNum);
+        }
     }
     public void MovePodsRight()
     {
@@ -88,6 +93,11 @@ public class R_PatientManager : MonoBehaviour
         {
             currentActivePatientNum++;
             podMovementHandler.MoveRight(currentActivePatientNum);
+        }
+        else if (currentActivePatientNum >= 0)
+        {
+            currentActivePatientNum = 0;
+            podMovementHandler.MoveLeft(currentActivePatientNum);
         }
     }
     public void changeDisplays()

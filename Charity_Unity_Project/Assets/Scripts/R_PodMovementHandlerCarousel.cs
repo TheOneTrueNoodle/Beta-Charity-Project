@@ -6,6 +6,7 @@ public class R_PodMovementHandlerCarousel : MonoBehaviour
 {
     public R_PatientManager patientManager;
     public List<R_CryoPod> cryoPods;
+    public List<GameObject> podPositionSlots;
     public int currentActivePod = 0;
 
     [Header("Move Variables")]
@@ -49,7 +50,7 @@ public class R_PodMovementHandlerCarousel : MonoBehaviour
 
         //moveQueue.Enqueue(MoveFromTo(true));
         moveQueue.Enqueue(CarouselMovement());
-        ReorderPods();
+        //ReorderPods();
     }
 
     private void ReorderPods()
@@ -73,60 +74,29 @@ public class R_PodMovementHandlerCarousel : MonoBehaviour
         }
     }
 
-    
-
     IEnumerator CarouselMovement()
     {
         moving = true;
         var t = 0f;
         Vector2[] from = new Vector2[cryoPods.Count];
         Vector2[] to = new Vector2[cryoPods.Count];
+        int toi = 0;
 
-        /*
-        int[] leftPods = new int[2];
-        int[] rightPods = new int[3];
-        for (int i = 0; i < leftPods.Length; i++)
+        #region New Code
+        for (int i = currentActivePod; i < cryoPods.Count + currentActivePod; i++)
         {
-            leftPods[i] = currentActivePod - i;
-            if (leftPods[i] < 0)
-            {
-                leftPods[i] = cryoPods.Count - (1 + i);
-            }
+            Debug.Log(i);
+            int newi = i;
+            if(i >= cryoPods.Count) { newi = i - cryoPods.Count; }
+            Debug.Log(newi);
+            from[newi] = cryoPods[newi].transform.localPosition;
+            to[newi] = podPositionSlots[toi].transform.localPosition;
+            cryoPods[newi].GetComponent<Canvas>().sortingOrder = podPositionSlots[toi].GetComponent<Canvas>().sortingOrder;
+             toi++;
         }
-        for (int i = 0; i < rightPods.Length; i++)
-        {
-            rightPods[i] = currentActivePod + (1 + i);
-            if(rightPods[i] >= cryoPods.Count) { rightPods[i] = 0 + i; }
-        }
-
-        for(int i = 0; i < cryoPods.Count; i++)
-        {
-            int moveDestination = 0;
-
-            from[i] = cryoPods[i].transform.localPosition;
-
-            for(int j = 0; j < leftPods.Length; j++)
-            {
-                if(i == leftPods[j]) 
-                { 
-                    moveDestination = j;
-                    cryoPods[i].GetComponent<Canvas>().sortingOrder = -moveDestination;
-                }
-            }
-            for (int j = 0; j < rightPods.Length; j++)
-            {
-                if (i == rightPods[j]) 
-                { 
-                    moveDestination = j;
-                    cryoPods[i].GetComponent<Canvas>().sortingOrder = moveDestination;
-                }
-            }
-
-            to[i] = new Vector2(transform.localPosition.x + (moveAmount * moveDestination), transform.localPosition.y);
-        }
-
-        */
-        for (int i = 0; i < cryoPods.Count; i++)
+        #endregion
+        #region Old Code
+        /*for (int i = 0; i < cryoPods.Count; i++)
         {
             from[i] = cryoPods[i].transform.localPosition;
             int distFromActive;
@@ -151,7 +121,8 @@ public class R_PodMovementHandlerCarousel : MonoBehaviour
             {
                 to[i] = Vector2.zero;
             }
-        }
+        }*/
+        #endregion
 
         while (t < 1f)
         {
@@ -200,7 +171,7 @@ public class R_PodMovementHandlerCarousel : MonoBehaviour
         {
             while (moveQueue.Count > 0)
                 if (moving != true) { yield return StartCoroutine(moveQueue.Dequeue()); }
-            yield return null;
+            yield return null; 
             yield return null;
         }
     }

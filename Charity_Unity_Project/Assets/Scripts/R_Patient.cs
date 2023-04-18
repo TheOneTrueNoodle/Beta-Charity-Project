@@ -7,6 +7,7 @@ public class R_Patient
 {
     public bool diagnosed = false;
 
+    public string dataName;
     public string patientName;
     public int patientAge;
     public string patientBioGender;

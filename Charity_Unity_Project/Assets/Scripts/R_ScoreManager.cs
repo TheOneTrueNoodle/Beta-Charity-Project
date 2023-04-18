@@ -32,6 +32,7 @@ public class R_ScoreManager : MonoBehaviour
     public void ResetStreak()
     {
         currentStreak = 1;
+        streakDisplay.text = currentStreak.ToString() + "x";
     }
 
     private void animateScore()

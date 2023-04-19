@@ -9,6 +9,7 @@ public class R_GameManager : MonoBehaviour
     public R_ReportManager reportManager;
     public R_PatientManager patientManager;
     public R_ScoreManager scoreManager;
+    public R_AnimatorManager animatorManager;
     private int roundNum;
 
     public float StartTime;
@@ -56,8 +57,10 @@ public class R_GameManager : MonoBehaviour
             patientManager.patientsCompleted++;
             if (patientManager.patientsCompleted >= patientManager.activePatients.Count)
             {
+                //New Round
                 roundNum++;
                 patientManager.newPatientSet((int)(1 + roundNum / 3));
+                animatorManager.PlayAnimation();
             }
 
             CallScoreIncrease(1f);

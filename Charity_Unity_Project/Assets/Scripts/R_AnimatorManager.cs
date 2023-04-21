@@ -32,6 +32,7 @@ public class R_AnimatorManager : MonoBehaviour
     {
         backgroundPodsAnim1.Play("StartUp");
         backgroundPodsAnim2.Play("StartUp");
+        //forgroundPodsAnim.cullingMode = AnimatorCullingMode.AlwaysAnimate;
         forgroundPodsAnim.Play("StartUp");
 
         Vector2 newPos = new Vector2(forgroundPods.transform.localPosition.x - moveAmount, forgroundPods.transform.localPosition.y);

@@ -5244,8 +5244,8 @@ MonoBehaviour:
   forgroundPodsAnim: {fileID: 1078102974}
   forgroundPods: {fileID: 1078102969}
   abovePosition: {fileID: 1923828670}
-  moveAmount: 150
-  moveSpeed: 5
+  moveAmount: 400
+  moveSpeed: 1
 --- !u!1 &365714127
 GameObject:
   m_ObjectHideFlags: 0
@@ -9088,6 +9088,7 @@ GameObject:
   - component: {fileID: 595127707}
   - component: {fileID: 595127706}
   - component: {fileID: 595127705}
+  - component: {fileID: 595127708}
   m_Layer: 5
   m_Name: Move Left Button
   m_TagString: Untagged
@@ -9222,6 +9223,27 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 595127703}
   m_CullTransparentMesh: 1
+--- !u!223 &595127708
+Canvas:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 595127703}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_RenderMode: 2
+  m_Camera: {fileID: 0}
+  m_PlaneDistance: 100
+  m_PixelPerfect: 0
+  m_ReceivesEvents: 1
+  m_OverrideSorting: 1
+  m_OverridePixelPerfect: 0
+  m_SortingBucketNormalizedSize: 0
+  m_AdditionalShaderChannelsFlag: 0
+  m_SortingLayerID: 0
+  m_SortingOrder: 1
+  m_TargetDisplay: 0
 --- !u!1 &603308380
 GameObject:
   m_ObjectHideFlags: 0
@@ -12026,6 +12048,7 @@ GameObject:
   - component: {fileID: 792747666}
   - component: {fileID: 792747665}
   - component: {fileID: 792747664}
+  - component: {fileID: 792747667}
   m_Layer: 5
   m_Name: Move Right Button
   m_TagString: Untagged
@@ -12160,6 +12183,27 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 792747662}
   m_CullTransparentMesh: 1
+--- !u!223 &792747667
+Canvas:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 792747662}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_RenderMode: 2
+  m_Camera: {fileID: 0}
+  m_PlaneDistance: 100
+  m_PixelPerfect: 0
+  m_ReceivesEvents: 1
+  m_OverrideSorting: 1
+  m_OverridePixelPerfect: 0
+  m_SortingBucketNormalizedSize: 0
+  m_AdditionalShaderChannelsFlag: 0
+  m_SortingLayerID: 0
+  m_SortingOrder: 1
+  m_TargetDisplay: 0
 --- !u!1 &798550010
 GameObject:
   m_ObjectHideFlags: 0
@@ -31365,7 +31409,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 430}
+  m_AnchoredPosition: {x: 0, y: 552}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1926422602
@@ -32226,7 +32270,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: -152.39998}
+  m_AnchoredPosition: {x: 0, y: -152.39996}
   m_SizeDelta: {x: -37, y: -315.49}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1991409076
@@ -33371,7 +33415,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: -152.39998}
+  m_AnchoredPosition: {x: 0, y: -152.39996}
   m_SizeDelta: {x: -37, y: -315.49}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2100286777

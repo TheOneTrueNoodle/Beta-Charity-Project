@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class R_AnimatorManager : MonoBehaviour
 {
@@ -9,6 +10,10 @@ public class R_AnimatorManager : MonoBehaviour
     public Animator forgroundPodsAnim;
     public GameObject forgroundPods;
     public GameObject abovePosition;
+
+    private bool buttonsDisabled = false;
+    public Image[] RotatePodsButtonImages;
+
 
     [SerializeField] private float moveAmount = 150f;
     [SerializeField] private float moveSpeed = 5f;
@@ -22,9 +27,10 @@ public class R_AnimatorManager : MonoBehaviour
 
     private void Update()
     {
-        if(Input.GetKey(KeyCode.Space))
+        if(forgroundPodsAnim.cullingMode != AnimatorCullingMode.AlwaysAnimate && buttonsDisabled == true)
         {
-            PlayAnimation();
+            foreach(Image image in RotatePodsButtonImages) { image.enabled = true; }
+            buttonsDisabled = false;
         }
     }
 
@@ -32,11 +38,14 @@ public class R_AnimatorManager : MonoBehaviour
     {
         backgroundPodsAnim1.Play("StartUp");
         backgroundPodsAnim2.Play("StartUp");
-        //forgroundPodsAnim.cullingMode = AnimatorCullingMode.AlwaysAnimate;
+        forgroundPodsAnim.cullingMode = AnimatorCullingMode.AlwaysAnimate;
         forgroundPodsAnim.Play("StartUp");
 
-        Vector2 newPos = new Vector2(forgroundPods.transform.localPosition.x - moveAmount, forgroundPods.transform.localPosition.y);
-        StartCoroutine(MoveFromTo(forgroundPods.transform.localPosition, newPos));
+        buttonsDisabled = true;
+        foreach (Image image in RotatePodsButtonImages) { image.enabled = false; }
+
+        //Vector2 newPos = new Vector2(forgroundPods.transform.localPosition.x - moveAmount, forgroundPods.transform.localPosition.y);
+        //StartCoroutine(MoveFromTo(forgroundPods.transform.localPosition, newPos));
     }
 
     IEnumerator MoveFromTo(Vector2 from, Vector2 to)

@@ -20,6 +20,8 @@ public class R_ReportManager : MonoBehaviour
     public TMPro.TMP_Text diagnosisDisplay;
     public List<string> PossibleDiagnosis;
 
+    public Color diagnosisTextColor;
+
     public void shiftViewport()
     {
         if (isInNewPos)
@@ -42,6 +44,7 @@ public class R_ReportManager : MonoBehaviour
     {
         currentDiagnosis = (Diagnosis)newDiagnosisValue;
         diagnosisDisplay.text = "Your current diagnosis is: " + PossibleDiagnosis[newDiagnosisValue];
+
         if (currentDiagnosis != Diagnosis.Undiagnosed)
         {
             removeDiagnosisButton.SetActive(true);

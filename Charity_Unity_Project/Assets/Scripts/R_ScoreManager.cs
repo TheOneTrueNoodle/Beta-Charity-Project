@@ -16,9 +16,23 @@ public class R_ScoreManager : MonoBehaviour
     public int DisplayedScore;
     public int increaseRate;
 
+    [Header("Text Shake Variables")]
+    public float speed = 3.5f;
+    public float amount = 0.8f;
+    private Vector3 defaultPos;
+
+    private Mesh mesh;
+    private Vector3[] vertices;
+
+    private void Start()
+    {
+        defaultPos = scoreDisplay.transform.localPosition;
+    }
+
     public void checkScore()
     {
         if (DisplayedScore < Score) { animateScore(); }
+        else { scoreDisplay.transform.localPosition = defaultPos; }
     }
 
     public void IncreaseScore(float modifier)
@@ -37,8 +51,10 @@ public class R_ScoreManager : MonoBehaviour
 
     private void animateScore()
     {
+        scoreDisplay.transform.localPosition = new Vector3(scoreDisplay.transform.localPosition.x + Mathf.Sin(Time.time * speed) * amount, scoreDisplay.transform.localPosition.y + Mathf.Cos(Time.time * speed), scoreDisplay.transform.localPosition.z);
         DisplayedScore += increaseRate;
         if(DisplayedScore > Score) { DisplayedScore = Score; }
         scoreDisplay.text = DisplayedScore.ToString();
+        //Play Sound Effect
     }
 }

@@ -2956,6 +2956,8 @@ MonoBehaviour:
   streakDisplay: {fileID: 1557310541}
   DisplayedScore: 0
   increaseRate: 1
+  speed: 50
+  amount: 0.03
 --- !u!4 &187381948
 Transform:
   m_ObjectHideFlags: 0
@@ -29709,6 +29711,7 @@ MonoBehaviour:
   - Irregularly irregular Atrial Fibrillation
   - Irregularly Irregular Atrial Flutter with Variable Conduction
   - Irregularly Irregular Second-Degree (Mobitz 2) Heart Block
+  diagnosisTextColor: {r: 0.990566, g: 0.40557137, b: 0.40557137, a: 1}
 --- !u!1 &1853429961
 GameObject:
   m_ObjectHideFlags: 0

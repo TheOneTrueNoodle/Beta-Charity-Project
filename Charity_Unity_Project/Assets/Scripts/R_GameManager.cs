@@ -140,11 +140,23 @@ public class R_GameManager : MonoBehaviour
         longestStreak = scoreManager.highestStreak;
 
         DisplayCanvas.SetActive(true);
+
+        if (scoreManager.Score > PlayerPrefs.GetInt("High Score"))
+        {
+            PlayerPrefs.SetInt("High Score", scoreManager.Score);
+            FinalScoreDisp.text = scoreManager.Score.ToString() + "!!!";
+        }
+        else
+        {
+            FinalScoreDisp.text = scoreManager.Score.ToString();
+        }
+
         GameEndReasonDisp.text = GameEndReason;
-        FinalScoreDisp.text = scoreManager.Score.ToString();
         LongestStreakDisp.text = longestStreak.ToString();
         CorrectPatientsDisp.text = patientsComplete.ToString();
         WrongAnswersDisp.text = wrongAnswerAmount.ToString();
+
+        
     }
 
     public void ResetGame()

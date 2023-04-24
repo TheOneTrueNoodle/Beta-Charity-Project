@@ -77,7 +77,7 @@ public class R_GameManager : MonoBehaviour
         }
         else if (patientManager.activePatients[patientManager.currentActivePatientNum].diagnosed != true && reportManager.SubmitDiagnosis(patientManager.activePatients[patientManager.currentActivePatientNum]) == false && reportManager.currentDiagnosis != Diagnosis.Undiagnosed)
         {
-            restoreLifeStreak++;
+            restoreLifeStreak = 0;
             Lives--;
             wrongAnswerAmount++;
             if (Lives <= 0) { endRun(0); }

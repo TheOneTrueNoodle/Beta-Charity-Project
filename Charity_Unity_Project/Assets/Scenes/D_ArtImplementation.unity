@@ -18189,6 +18189,7 @@ GameObject:
   - component: {fileID: 1096382985}
   - component: {fileID: 1096382987}
   - component: {fileID: 1096382986}
+  - component: {fileID: 1096382988}
   m_Layer: 5
   m_Name: 'Speech Bubble '
   m_TagString: Untagged
@@ -18260,6 +18261,27 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1096382984}
   m_CullTransparentMesh: 1
+--- !u!223 &1096382988
+Canvas:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1096382984}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_RenderMode: 2
+  m_Camera: {fileID: 0}
+  m_PlaneDistance: 100
+  m_PixelPerfect: 0
+  m_ReceivesEvents: 1
+  m_OverrideSorting: 1
+  m_OverridePixelPerfect: 0
+  m_SortingBucketNormalizedSize: 0
+  m_AdditionalShaderChannelsFlag: 0
+  m_SortingLayerID: 0
+  m_SortingOrder: 2
+  m_TargetDisplay: 0
 --- !u!1 &1097375794
 GameObject:
   m_ObjectHideFlags: 0
@@ -22749,7 +22771,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1353888366
 RectTransform:
   m_ObjectHideFlags: 0
@@ -26829,6 +26851,7 @@ GameObject:
   - component: {fileID: 1595887425}
   - component: {fileID: 1595887427}
   - component: {fileID: 1595887426}
+  - component: {fileID: 1595887428}
   m_Layer: 5
   m_Name: 'Speech Bubble '
   m_TagString: Untagged
@@ -26904,6 +26927,27 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1595887424}
   m_CullTransparentMesh: 1
+--- !u!223 &1595887428
+Canvas:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1595887424}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_RenderMode: 2
+  m_Camera: {fileID: 0}
+  m_PlaneDistance: 100
+  m_PixelPerfect: 0
+  m_ReceivesEvents: 1
+  m_OverrideSorting: 1
+  m_OverridePixelPerfect: 0
+  m_SortingBucketNormalizedSize: 0
+  m_AdditionalShaderChannelsFlag: 0
+  m_SortingLayerID: 0
+  m_SortingOrder: 2
+  m_TargetDisplay: 0
 --- !u!1 &1616650262
 GameObject:
   m_ObjectHideFlags: 0
@@ -34070,7 +34114,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: -152.39993}
+  m_AnchoredPosition: {x: 0, y: -152.39995}
   m_SizeDelta: {x: -37, y: -315.49}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1991409076
@@ -35351,7 +35395,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: -152.39993}
+  m_AnchoredPosition: {x: 0, y: -152.39995}
   m_SizeDelta: {x: -37, y: -315.49}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2100286777

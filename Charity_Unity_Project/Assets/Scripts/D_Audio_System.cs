@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class D_Audio_System : MonoBehaviour
 {
@@ -13,9 +14,10 @@ public class D_Audio_System : MonoBehaviour
     public List<string> SoundNames = new List<string>();
     public List<float> SoundVolume = new List<float>();
 
+    public Slider MusicVolumeSlider;
+    public AudioSource musicSource;
 
-
-    void Start()
+    void Awake()
     {
         if (isInGame)
         {
@@ -28,6 +30,11 @@ public class D_Audio_System : MonoBehaviour
         InvokeRepeating("playAmbientAudio", 10, 10);
     }
 
+    public void changeMusicVolume()
+    {
+        musicSource.volume = MusicVolumeSlider.value;
+    }
+
     void playAbmientAudio()
     {
         if (Random.Range(0, 100) <= randomSoundLikleyHood)
@@ -38,12 +45,20 @@ public class D_Audio_System : MonoBehaviour
 
     public void PlayAudio(string name)//, bool randomness, float specificPitch)
     {
+
         //create a new object for the sound to play from
         GameObject soundPlayer = new GameObject();
         soundPlayer.transform.parent = transform; // parent it to this object to keep scene tidy
         soundPlayer.AddComponent<AudioSource>();//add audio source to it
 
         AudioSource soundPlayerSource = soundPlayer.GetComponent<AudioSource>();//reference the audio source itself 
+
+        if (name == "music")
+        {
+            soundPlayerSource.name = "music";
+            soundPlayerSource.loop = true;
+            musicSource = soundPlayerSource;
+        }
 
         //*----------- the next few lines dont work rn *
         //set the pitch to the specified value
@@ -63,6 +78,7 @@ public class D_Audio_System : MonoBehaviour
             {
                 soundPlayerSource.clip = Sounds[i];//...assign the clip 
                 soundPlayerSource.volume = SoundVolume[i];//and set its volume
+                soundPlayerSource.volume *= FindObjectOfType<C_PauseMenu>().SFXVolumeMultiplier;//multiply it by the volume amount
                 hasFoundSound = true;
 
                 Debug.Log(name);

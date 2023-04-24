@@ -37,7 +37,7 @@ public class R_ScoreManager : MonoBehaviour
 
     public void IncreaseScore(float modifier)
     {
-        Score += (int)(gainAmount * modifier) + (gainAmount/10 * currentStreak - 1);
+        Score += (int)(gainAmount * modifier) + (gainAmount/10 * (currentStreak - 1));
         currentStreak++;
         if(highestStreak < currentStreak) { highestStreak = currentStreak; }
         streakDisplay.text = currentStreak.ToString() + "x";

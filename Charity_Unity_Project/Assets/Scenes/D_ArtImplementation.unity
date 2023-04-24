@@ -1144,6 +1144,7 @@ MonoBehaviour:
     patientName: 
     patientAge: 0
     patientBioGender: 
+    newPatientBioGender: 0
     ECG_GraphSprite: {fileID: 0}
     correctDiagnosis: 0
     submittedDiagnosis: 0
@@ -1268,7 +1269,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -64.10004, y: 92.3}
+  m_AnchoredPosition: {x: -64.1001, y: 92.29999}
   m_SizeDelta: {x: -563.63, y: -86.9}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &44879488
@@ -4185,7 +4186,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -64.10004, y: 92.3}
+  m_AnchoredPosition: {x: -64.1001, y: 92.29999}
   m_SizeDelta: {x: -563.63, y: -86.9}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &230779010
@@ -5015,7 +5016,7 @@ RectTransform:
   m_Children:
   - {fileID: 57380158}
   m_Father: {fileID: 1147488385}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -5060,6 +5061,7 @@ MonoBehaviour:
     patientName: 
     patientAge: 0
     patientBioGender: 
+    newPatientBioGender: 0
     ECG_GraphSprite: {fileID: 0}
     correctDiagnosis: 0
     submittedDiagnosis: 0
@@ -8760,6 +8762,7 @@ MonoBehaviour:
     patientName: 
     patientAge: 0
     patientBioGender: 
+    newPatientBioGender: 0
     ECG_GraphSprite: {fileID: 0}
     correctDiagnosis: 0
     submittedDiagnosis: 0
@@ -9133,6 +9136,60 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 530860909}
   m_CullTransparentMesh: 1
+--- !u!1 &532465390
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 532465391}
+  - component: {fileID: 532465392}
+  m_Layer: 5
+  m_Name: Holodoc
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &532465391
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 532465390}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1080586191}
+  - {fileID: 1914791592}
+  m_Father: {fileID: 1147488385}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -122.7, y: 65.5}
+  m_SizeDelta: {x: 75.57013, y: 75.57013}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &532465392
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 532465390}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c38f6d9bc8460f34087549148e570933, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  GameManager: {fileID: 828921636}
+  DefaultExpression: {fileID: 1914791591}
+  LastLifeExpression: {fileID: 1080586190}
 --- !u!1 &537088113
 GameObject:
   m_ObjectHideFlags: 0
@@ -18894,8 +18951,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1080586190}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 122.7, y: -65.5, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -18903,8 +18960,8 @@ Transform:
   - {fileID: 1332182842}
   - {fileID: 230495118}
   - {fileID: 869406056}
-  m_Father: {fileID: 1147488385}
-  m_RootOrder: 1
+  m_Father: {fileID: 532465391}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1089577460
 GameObject:
@@ -20217,8 +20274,7 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 798550011}
-  - {fileID: 1080586191}
-  - {fileID: 1914791592}
+  - {fileID: 532465391}
   - {fileID: 263922633}
   - {fileID: 1622415230}
   - {fileID: 1362070417}
@@ -23724,6 +23780,8 @@ MonoBehaviour:
   podMovementHandler: {fileID: 1078102972}
   RegularPatientData: {fileID: 11400000, guid: 08cccaae84c217042b9b0a9b64ff7e51, type: 2}
   IrregularPatientData: {fileID: 11400000, guid: 1ab3d35698476484a9b00b4e42ff4a69, type: 2}
+  MaleNames: {fileID: 11400000, guid: 0547740690405d74e80ebaa1c982afc8, type: 2}
+  FemaleNames: {fileID: 11400000, guid: 2c3dd8bbaa98a4c409ac39407bec5f62, type: 2}
   PatientNumberPerRound: 6
   patientsCompleted: 0
   activePatients: []
@@ -24112,7 +24170,7 @@ RectTransform:
   - {fileID: 1646172161}
   - {fileID: 1705905700}
   m_Father: {fileID: 1147488385}
-  m_RootOrder: 5
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
@@ -28316,7 +28374,7 @@ RectTransform:
   m_Children:
   - {fileID: 1294828665}
   m_Father: {fileID: 1147488385}
-  m_RootOrder: 4
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -29225,6 +29283,7 @@ MonoBehaviour:
     patientName: 
     patientAge: 0
     patientBioGender: 
+    newPatientBioGender: 0
     ECG_GraphSprite: {fileID: 0}
     correctDiagnosis: 0
     submittedDiagnosis: 0
@@ -30541,6 +30600,7 @@ MonoBehaviour:
     patientName: 
     patientAge: 0
     patientBioGender: 
+    newPatientBioGender: 0
     ECG_GraphSprite: {fileID: 0}
     correctDiagnosis: 0
     submittedDiagnosis: 0
@@ -34632,12 +34692,12 @@ RectTransform:
   m_LocalScale: {x: 0.7557013, y: 0.7557013, z: 0.7557013}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 1147488385}
-  m_RootOrder: 2
+  m_Father: {fileID: 532465391}
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -122.7, y: 65.5}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1914791593
@@ -35956,6 +36016,7 @@ MonoBehaviour:
     patientName: 
     patientAge: 0
     patientBioGender: 
+    newPatientBioGender: 0
     ECG_GraphSprite: {fileID: 0}
     correctDiagnosis: 0
     submittedDiagnosis: 0

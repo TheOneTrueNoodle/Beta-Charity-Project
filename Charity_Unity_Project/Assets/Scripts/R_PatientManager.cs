@@ -8,8 +8,12 @@ public class R_PatientManager : MonoBehaviour
 {
     public R_PodMovementHandlerCarousel podMovementHandler;
 
+    [Header("Patient Data")]
     public R_PatientData RegularPatientData;
     public R_PatientData IrregularPatientData;
+    [Header("Patient Names Data")]
+    public R_RandomNameData MaleNames;
+    public R_RandomNameData FemaleNames;
 
     public int PatientNumberPerRound = 6;
     [HideInInspector] public int patientsCompleted = 0;
@@ -50,11 +54,22 @@ public class R_PatientManager : MonoBehaviour
             int patient = Random.Range(0, RegularPatientData.AllPatients.Count);
             R_Patient newPatient = new R_Patient();
 
-            newPatient.patientName = RegularPatientData.AllPatients[patient].patientName;
+            //newPatient.patientName = RegularPatientData.AllPatients[patient].patientName;
             newPatient.patientAge = RegularPatientData.AllPatients[patient].patientAge;
-            newPatient.patientBioGender = RegularPatientData.AllPatients[patient].patientBioGender;
+            newPatient.newPatientBioGender = RegularPatientData.AllPatients[patient].newPatientBioGender;
             newPatient.ECG_GraphSprite = RegularPatientData.AllPatients[patient].ECG_GraphSprite;
             newPatient.correctDiagnosis = RegularPatientData.AllPatients[patient].correctDiagnosis;
+
+            if(newPatient.newPatientBioGender == Gender.Male)
+            {
+                string name = MaleNames.PossibleNames[Random.Range(0, MaleNames.PossibleNames.Count)];
+                newPatient.patientName = name;
+            }
+            else
+            {
+                string name = FemaleNames.PossibleNames[Random.Range(0, FemaleNames.PossibleNames.Count)];
+                newPatient.patientName = name;
+            }
 
             activePatients.Add(newPatient);
         }
@@ -104,7 +119,7 @@ public class R_PatientManager : MonoBehaviour
     {
         nameDisp.text = "Name: " + activePatients[currentActivePatientNum].patientName;
         ageDisp.text = "Age: " + activePatients[currentActivePatientNum].patientAge.ToString();
-        genderDisp.text = "Bio Sex: " + activePatients[currentActivePatientNum].patientBioGender;
+        genderDisp.text = "Bio Sex: " + activePatients[currentActivePatientNum].newPatientBioGender;
         ECGDisp.texture = activePatients[currentActivePatientNum].ECG_GraphSprite;
     }
 }

@@ -11,8 +11,16 @@ public class R_Patient
     public string patientName;
     public int patientAge;
     public string patientBioGender;
+    [HideInInspector]public Gender newPatientBioGender;
 
     public Texture ECG_GraphSprite;
     public Diagnosis correctDiagnosis;
     public Diagnosis submittedDiagnosis;
 }
+
+public enum Gender
+{
+    Male,
+    Female
+}
+

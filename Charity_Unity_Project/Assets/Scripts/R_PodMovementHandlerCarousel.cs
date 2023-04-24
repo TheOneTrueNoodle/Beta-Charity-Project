@@ -85,10 +85,8 @@ public class R_PodMovementHandlerCarousel : MonoBehaviour
         #region New Code
         for (int i = currentActivePod; i < cryoPods.Count + currentActivePod; i++)
         {
-            Debug.Log(i);
             int newi = i;
             if(i >= cryoPods.Count) { newi = i - cryoPods.Count; }
-            Debug.Log(newi);
             from[newi] = cryoPods[newi].transform.localPosition;
             to[newi] = podPositionSlots[toi].transform.localPosition;
             cryoPods[newi].GetComponent<Canvas>().sortingOrder = podPositionSlots[toi].GetComponent<Canvas>().sortingOrder;

@@ -8,8 +8,8 @@ public class R_ScoreManager : MonoBehaviour
     [Header("Score Variables")]
     public int Score;
     public int gainAmount;
-    public int currentStreak = 1;
-    public int highestStreak = 1;
+    public int currentStreak = 0;
+    public int highestStreak = 0;
     [Header("Animated Score Variables")]
     public TMP_Text scoreDisplay;
     public TMP_Text streakDisplay;
@@ -27,6 +27,7 @@ public class R_ScoreManager : MonoBehaviour
     private void Start()
     {
         defaultPos = scoreDisplay.transform.localPosition;
+        ResetStreak();
     }
 
     public void checkScore()
@@ -37,7 +38,7 @@ public class R_ScoreManager : MonoBehaviour
 
     public void IncreaseScore(float modifier)
     {
-        Score += (int)(gainAmount * modifier) + (gainAmount/10 * (currentStreak - 1));
+        Score += (int)(gainAmount * modifier) + (gainAmount / 10) * currentStreak;
         currentStreak++;
         if(highestStreak < currentStreak) { highestStreak = currentStreak; }
         streakDisplay.text = currentStreak.ToString() + "x";
@@ -45,7 +46,7 @@ public class R_ScoreManager : MonoBehaviour
 
     public void ResetStreak()
     {
-        currentStreak = 1;
+        currentStreak = 0;
         streakDisplay.text = currentStreak.ToString() + "x";
     }
 

@@ -53,14 +53,19 @@ public class R_GameManager : MonoBehaviour
         Debug.Log("entered diagnosis");
         if (reportManager.SubmitDiagnosis(patientManager.activePatients[patientManager.currentActivePatientNum]) == true)
         {
+            //Correct Answer
             patientsComplete++;
             patientManager.patientsCompleted++;
             if (patientManager.patientsCompleted >= patientManager.activePatients.Count)
             {
                 //New Round
                 roundNum++;
-                patientManager.newPatientSet((int)(1 + roundNum / 3));
+                patientManager.newPatientSet((int)(1 + roundNum / 3 + (patientsComplete / 20)));
                 animatorManager.PlayAnimation();
+            }
+            else
+            {
+                patientManager.MovePodsRight();
             }
 
             CallScoreIncrease(1f);

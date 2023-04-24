@@ -87,6 +87,12 @@ public class R_PatientManager : MonoBehaviour
         }
         podMovementHandler.AssignPatients(activePatients);
         changeDisplays();
+        ResetPodPosition();
+    }
+
+    public void ResetPodPosition()
+    {
+        podMovementHandler.MoveLeft(0);
     }
 
     public void MovePodsLeft()

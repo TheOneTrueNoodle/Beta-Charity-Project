@@ -22,6 +22,11 @@ public class R_ReportManager : MonoBehaviour
 
     public Color diagnosisTextColor;
 
+    [Header("Correct and Incorrect Answers")]
+    public GameObject CorrectAnswerDisplay;
+    public GameObject IncorrectAnswerDisplay;
+    public float DisplayTime = 1f;
+
     public void shiftViewport()
     {
         if (isInNewPos)
@@ -63,6 +68,7 @@ public class R_ReportManager : MonoBehaviour
         int diagnosisNumber;
         if (currentPatient.diagnosed == true)
         {
+            //Already Diagnosed
             Debug.Log("Patient is diagnosed");
             diagnosisNumber = (int)currentPatient.submittedDiagnosis;
             diagnosisDisplay.text = "This patient has already been diagnosed with " + PossibleDiagnosis[diagnosisNumber];
@@ -70,6 +76,7 @@ public class R_ReportManager : MonoBehaviour
         }
         else if (currentDiagnosis == currentPatient.correctDiagnosis)
         {
+            //Correct Diagnosis
             diagnosisNumber = (int)currentDiagnosis;
             diagnosisDisplay.text = PossibleDiagnosis[diagnosisNumber] + " is the correct diagnosis";
             currentPatient.diagnosed = true;
@@ -78,22 +85,46 @@ public class R_ReportManager : MonoBehaviour
             FindObjectOfType<D_Audio_System>().PlayAudio("correct");
             currentDiagnosis = 0;
 
+            StartCoroutine(CorrectAnswer());
+
             return true;
         }
         else if (currentDiagnosis != Diagnosis.Undiagnosed)
         {
+            //Incorrect Diagnosis
             diagnosisNumber = (int)currentDiagnosis;
             diagnosisDisplay.text = PossibleDiagnosis[diagnosisNumber] + " is the incorrect diagnosis"; //Currently does not lock you out of correcting your mistake
 
             FindObjectOfType<D_Audio_System>().PlayAudio("incorrect");
             //currentPatient.diagnosed = true;
+
+            StartCoroutine(IncorrectAnswer());
+
             return false;
         }
         else
         {
+            //No diagnosis selected
             diagnosisDisplay.text = "Please select a diagnosis";
             return false;
         }
+    }
+
+    IEnumerator CorrectAnswer()
+    {
+        CorrectAnswerDisplay.SetActive(true);
+
+        yield return new WaitForSeconds(DisplayTime);
+
+        CorrectAnswerDisplay.SetActive(false);
+    }
+    IEnumerator IncorrectAnswer()
+    {
+        IncorrectAnswerDisplay.SetActive(true);
+
+        yield return new WaitForSeconds(DisplayTime);
+
+        IncorrectAnswerDisplay.SetActive(false);
     }
 
     IEnumerator MoveFromTo(Vector2 from, Vector2 to)

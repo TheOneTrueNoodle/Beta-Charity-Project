@@ -31251,6 +31251,9 @@ MonoBehaviour:
   - Irregularly Irregular Atrial Flutter with Variable Conduction
   - Irregularly Irregular Second-Degree (Mobitz 2) Heart Block
   diagnosisTextColor: {r: 0.990566, g: 0.40557137, b: 0.40557137, a: 1}
+  CorrectAnswerDisplay: {fileID: 113698239}
+  IncorrectAnswerDisplay: {fileID: 1713477115}
+  DisplayTime: 0.7
 --- !u!1 &1853429961
 GameObject:
   m_ObjectHideFlags: 0

@@ -38,11 +38,22 @@ public class R_PatientManager : MonoBehaviour
             int patient = Random.Range(0, IrregularPatientData.AllPatients.Count);
             R_Patient newPatient = new R_Patient();
 
-            newPatient.patientName = IrregularPatientData.AllPatients[patient].patientName;
+            //newPatient.patientName = IrregularPatientData.AllPatients[patient].patientName;
             newPatient.patientAge = IrregularPatientData.AllPatients[patient].patientAge;
-            newPatient.patientBioGender = IrregularPatientData.AllPatients[patient].patientBioGender;
+            newPatient.newPatientBioGender = RegularPatientData.AllPatients[patient].newPatientBioGender;
             newPatient.ECG_GraphSprite = IrregularPatientData.AllPatients[patient].ECG_GraphSprite;
             newPatient.correctDiagnosis = IrregularPatientData.AllPatients[patient].correctDiagnosis;
+
+            if (newPatient.newPatientBioGender == Gender.Male)
+            {
+                string name = MaleNames.PossibleNames[Random.Range(0, MaleNames.PossibleNames.Count)];
+                newPatient.patientName = name;
+            }
+            else
+            {
+                string name = FemaleNames.PossibleNames[Random.Range(0, FemaleNames.PossibleNames.Count)];
+                newPatient.patientName = name;
+            }
 
             activePatients.Add(newPatient);
         }

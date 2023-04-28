@@ -18,14 +18,16 @@ MonoBehaviour:
     patientName: Jeremy
     patientAge: 28
     patientBioGender: Male
+    newPatientBioGender: 0
     ECG_GraphSprite: {fileID: 2800000, guid: 20a3cbe6f4a27d543995dd60be38a190, type: 3}
-    correctDiagnosis: 13
+    correctDiagnosis: 12
     submittedDiagnosis: 14
   - diagnosed: 0
     dataName: E4
     patientName: Susan
     patientAge: 47
     patientBioGender: Female
+    newPatientBioGender: 0
     ECG_GraphSprite: {fileID: 2800000, guid: e842b727935b5654cb3cbc1cc1bea04a, type: 3}
     correctDiagnosis: 13
     submittedDiagnosis: 0
@@ -34,6 +36,7 @@ MonoBehaviour:
     patientName: Mary
     patientAge: 47
     patientBioGender: Female
+    newPatientBioGender: 0
     ECG_GraphSprite: {fileID: 2800000, guid: 34e2d57943f44c24c891fab42f8fe18a, type: 3}
     correctDiagnosis: 12
     submittedDiagnosis: 0
@@ -42,6 +45,7 @@ MonoBehaviour:
     patientName: Madeline
     patientAge: 47
     patientBioGender: Female
+    newPatientBioGender: 0
     ECG_GraphSprite: {fileID: 2800000, guid: 50c9a76f5ac6a604ebc2f3c87c66615d, type: 3}
     correctDiagnosis: 13
     submittedDiagnosis: 0
@@ -50,6 +54,268 @@ MonoBehaviour:
     patientName: Patricia
     patientAge: 47
     patientBioGender: Female
+    newPatientBioGender: 0
     ECG_GraphSprite: {fileID: 2800000, guid: df752c6c704d2314d90ba3dd625d2774, type: 3}
     correctDiagnosis: 15
+    submittedDiagnosis: 0
+  - diagnosed: 0
+    dataName: H1
+    patientName: Patricia
+    patientAge: 47
+    patientBioGender: Female
+    newPatientBioGender: 0
+    ECG_GraphSprite: {fileID: 2800000, guid: bffc60bfd205f034da99eeafb223e1f7, type: 3}
+    correctDiagnosis: 15
+    submittedDiagnosis: 0
+  - diagnosed: 0
+    dataName: H2
+    patientName: Patricia
+    patientAge: 47
+    patientBioGender: Female
+    newPatientBioGender: 0
+    ECG_GraphSprite: {fileID: 2800000, guid: 8141973f99a40fb459cf9ade19223c92, type: 3}
+    correctDiagnosis: 15
+    submittedDiagnosis: 0
+  - diagnosed: 0
+    dataName: H3
+    patientName: Patricia
+    patientAge: 47
+    patientBioGender: Female
+    newPatientBioGender: 0
+    ECG_GraphSprite: {fileID: 2800000, guid: 2cc8a0a00beeebd4e834b7aea0c2c8e5, type: 3}
+    correctDiagnosis: 15
+    submittedDiagnosis: 0
+  - diagnosed: 0
+    dataName: H4
+    patientName: Patricia
+    patientAge: 47
+    patientBioGender: Female
+    newPatientBioGender: 0
+    ECG_GraphSprite: {fileID: 2800000, guid: a651a29175719424aa262ca091019a4f, type: 3}
+    correctDiagnosis: 15
+    submittedDiagnosis: 0
+  - diagnosed: 0
+    dataName: H6
+    patientName: Patricia
+    patientAge: 47
+    patientBioGender: Female
+    newPatientBioGender: 0
+    ECG_GraphSprite: {fileID: 2800000, guid: c3fb51b3ccc843e4e8ec9bfe15809f83, type: 3}
+    correctDiagnosis: 15
+    submittedDiagnosis: 0
+  - diagnosed: 0
+    dataName: H7
+    patientName: Patricia
+    patientAge: 47
+    patientBioGender: Female
+    newPatientBioGender: 0
+    ECG_GraphSprite: {fileID: 2800000, guid: ef80e0cc977a3834e848c350cda2c097, type: 3}
+    correctDiagnosis: 15
+    submittedDiagnosis: 0
+  - diagnosed: 0
+    dataName: H10
+    patientName: Patricia
+    patientAge: 47
+    patientBioGender: Female
+    newPatientBioGender: 0
+    ECG_GraphSprite: {fileID: 2800000, guid: a7eebb3bdde1ffe49b8b45e23a567b3f, type: 3}
+    correctDiagnosis: 15
+    submittedDiagnosis: 0
+  - diagnosed: 0
+    dataName: A2
+    patientName: Patricia
+    patientAge: 47
+    patientBioGender: Female
+    newPatientBioGender: 0
+    ECG_GraphSprite: {fileID: 2800000, guid: 42a6b387dae9bca4e87a1e3731eed8f2, type: 3}
+    correctDiagnosis: 12
+    submittedDiagnosis: 0
+  - diagnosed: 0
+    dataName: A3
+    patientName: Patricia
+    patientAge: 47
+    patientBioGender: Female
+    newPatientBioGender: 0
+    ECG_GraphSprite: {fileID: 2800000, guid: dbd96d0155572dd4d8acbdb728821e16, type: 3}
+    correctDiagnosis: 11
+    submittedDiagnosis: 0
+  - diagnosed: 0
+    dataName: A6
+    patientName: Patricia
+    patientAge: 47
+    patientBioGender: Female
+    newPatientBioGender: 0
+    ECG_GraphSprite: {fileID: 2800000, guid: 287397434d717a64882e52ca59049418, type: 3}
+    correctDiagnosis: 15
+    submittedDiagnosis: 0
+  - diagnosed: 0
+    dataName: A17
+    patientName: Patricia
+    patientAge: 47
+    patientBioGender: Female
+    newPatientBioGender: 0
+    ECG_GraphSprite: {fileID: 2800000, guid: 909b666e48d78c4419d1fdfa4baae421, type: 3}
+    correctDiagnosis: 13
+    submittedDiagnosis: 0
+  - diagnosed: 0
+    dataName: B3
+    patientName: Patricia
+    patientAge: 47
+    patientBioGender: Female
+    newPatientBioGender: 0
+    ECG_GraphSprite: {fileID: 2800000, guid: b533fbc1761dc9942b4be3137fa41a5c, type: 3}
+    correctDiagnosis: 12
+    submittedDiagnosis: 0
+  - diagnosed: 0
+    dataName: B5
+    patientName: Patricia
+    patientAge: 47
+    patientBioGender: Female
+    newPatientBioGender: 0
+    ECG_GraphSprite: {fileID: 2800000, guid: 44dfbe38191caa54dbd0ef9b9ed8f59e, type: 3}
+    correctDiagnosis: 3
+    submittedDiagnosis: 0
+  - diagnosed: 0
+    dataName: B6
+    patientName: Patricia
+    patientAge: 47
+    patientBioGender: Female
+    newPatientBioGender: 0
+    ECG_GraphSprite: {fileID: 2800000, guid: bb35cb5940a32cb498603196a2b7ac87, type: 3}
+    correctDiagnosis: 12
+    submittedDiagnosis: 0
+  - diagnosed: 0
+    dataName: C2
+    patientName: Patricia
+    patientAge: 47
+    patientBioGender: Female
+    newPatientBioGender: 0
+    ECG_GraphSprite: {fileID: 2800000, guid: 37373fcd999380f48910c5ff9e8448b8, type: 3}
+    correctDiagnosis: 15
+    submittedDiagnosis: 0
+  - diagnosed: 0
+    dataName: C5
+    patientName: Patricia
+    patientAge: 47
+    patientBioGender: Female
+    newPatientBioGender: 0
+    ECG_GraphSprite: {fileID: 2800000, guid: a4959adc948aaa347a0694ac33c37e86, type: 3}
+    correctDiagnosis: 16
+    submittedDiagnosis: 0
+  - diagnosed: 0
+    dataName: C8
+    patientName: Patricia
+    patientAge: 47
+    patientBioGender: Female
+    newPatientBioGender: 0
+    ECG_GraphSprite: {fileID: 2800000, guid: 0f014b0a15c906748a4c6f44c5c9fcb6, type: 3}
+    correctDiagnosis: 13
+    submittedDiagnosis: 0
+  - diagnosed: 0
+    dataName: C9
+    patientName: Patricia
+    patientAge: 47
+    patientBioGender: Female
+    newPatientBioGender: 0
+    ECG_GraphSprite: {fileID: 2800000, guid: 5e3831ea8f6564a4389e73067bc6d6c9, type: 3}
+    correctDiagnosis: 12
+    submittedDiagnosis: 0
+  - diagnosed: 0
+    dataName: C10
+    patientName: Patricia
+    patientAge: 47
+    patientBioGender: Female
+    newPatientBioGender: 0
+    ECG_GraphSprite: {fileID: 2800000, guid: 83343d0ee245df24180a176c816c37fb, type: 3}
+    correctDiagnosis: 12
+    submittedDiagnosis: 0
+  - diagnosed: 0
+    dataName: D1
+    patientName: Patricia
+    patientAge: 47
+    patientBioGender: Female
+    newPatientBioGender: 0
+    ECG_GraphSprite: {fileID: 2800000, guid: 30ec5255be4a81b4a8e9494d3cc05501, type: 3}
+    correctDiagnosis: 15
+    submittedDiagnosis: 0
+  - diagnosed: 0
+    dataName: D2
+    patientName: Patricia
+    patientAge: 47
+    patientBioGender: Female
+    newPatientBioGender: 0
+    ECG_GraphSprite: {fileID: 2800000, guid: 34b661378112658418e189d485cc2ef3, type: 3}
+    correctDiagnosis: 15
+    submittedDiagnosis: 0
+  - diagnosed: 0
+    dataName: D3
+    patientName: Patricia
+    patientAge: 47
+    patientBioGender: Female
+    newPatientBioGender: 0
+    ECG_GraphSprite: {fileID: 2800000, guid: 3411be41245ff5e4da7cf718a7f46552, type: 3}
+    correctDiagnosis: 15
+    submittedDiagnosis: 0
+  - diagnosed: 0
+    dataName: D4
+    patientName: Patricia
+    patientAge: 47
+    patientBioGender: Female
+    newPatientBioGender: 0
+    ECG_GraphSprite: {fileID: 2800000, guid: 77f1cbf27da41cc42890262c49cc1732, type: 3}
+    correctDiagnosis: 15
+    submittedDiagnosis: 0
+  - diagnosed: 0
+    dataName: E1
+    patientName: Patricia
+    patientAge: 47
+    patientBioGender: Female
+    newPatientBioGender: 0
+    ECG_GraphSprite: {fileID: 2800000, guid: fcfa2c5e95fffc644b98b83c07962fc5, type: 3}
+    correctDiagnosis: 13
+    submittedDiagnosis: 0
+  - diagnosed: 0
+    dataName: E2
+    patientName: Patricia
+    patientAge: 47
+    patientBioGender: Female
+    newPatientBioGender: 0
+    ECG_GraphSprite: {fileID: 2800000, guid: 41d0e148c4541cf4fb82181c56bc03fe, type: 3}
+    correctDiagnosis: 13
+    submittedDiagnosis: 0
+  - diagnosed: 0
+    dataName: E7
+    patientName: Patricia
+    patientAge: 47
+    patientBioGender: Female
+    newPatientBioGender: 0
+    ECG_GraphSprite: {fileID: 2800000, guid: 99520b8c3303e264ba6bca2aa8062053, type: 3}
+    correctDiagnosis: 12
+    submittedDiagnosis: 0
+  - diagnosed: 0
+    dataName: D1b
+    patientName: Patricia
+    patientAge: 47
+    patientBioGender: Female
+    newPatientBioGender: 0
+    ECG_GraphSprite: {fileID: 2800000, guid: feedddf6e32b24145a8e44a8f605cf2f, type: 3}
+    correctDiagnosis: 15
+    submittedDiagnosis: 0
+  - diagnosed: 0
+    dataName: D6b
+    patientName: Patricia
+    patientAge: 47
+    patientBioGender: Female
+    newPatientBioGender: 0
+    ECG_GraphSprite: {fileID: 2800000, guid: 5b2765d66bef45e4c81e10b9e481e050, type: 3}
+    correctDiagnosis: 15
+    submittedDiagnosis: 0
+  - diagnosed: 0
+    dataName: D7b
+    patientName: Patricia
+    patientAge: 47
+    patientBioGender: Female
+    newPatientBioGender: 0
+    ECG_GraphSprite: {fileID: 2800000, guid: 5b2765d66bef45e4c81e10b9e481e050, type: 3}
+    correctDiagnosis: 13
     submittedDiagnosis: 0

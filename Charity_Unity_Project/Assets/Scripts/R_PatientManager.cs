@@ -106,6 +106,7 @@ public class R_PatientManager : MonoBehaviour
 
     public void ResetPodPosition()
     {
+        podMovementHandler.ResetPodLights();
         podMovementHandler.MoveLeft(0);
     }
 

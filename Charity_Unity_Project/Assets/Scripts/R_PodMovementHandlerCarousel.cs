@@ -54,6 +54,14 @@ public class R_PodMovementHandlerCarousel : MonoBehaviour
         UpdatePodLights();
     }
 
+    public void ResetPodLights()
+    {
+        for (int i = 0; i < cryoPods.Count; i++)
+        {
+            cryoPods[i].ResetColor();
+        }
+    }
+
     private void UpdatePodLights()
     {
         for (int i = 0; i < cryoPods.Count; i++)

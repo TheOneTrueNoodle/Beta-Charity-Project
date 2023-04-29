@@ -32,6 +32,7 @@ public class R_PodMovementHandler : MonoBehaviour
         for (int i = 0; i < newPatients.Count; i++)
         {
             cryoPods[i].thisPatient = newPatients[i];
+            cryoPods[i].ResetColor();
         }
         changeDisplays();
     }

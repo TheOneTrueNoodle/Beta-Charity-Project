@@ -21,6 +21,9 @@ public class R_GameManager : MonoBehaviour
     public int Lives = 3;
     private int restoreLifeStreak;
 
+    public Color correctColor;
+    public Color incorrectColor;
+
     //Post Game Data
     [Header("Report Card Variables")]
     public GameObject DisplayCanvas;
@@ -65,6 +68,7 @@ public class R_GameManager : MonoBehaviour
             }
             else
             {
+                patientManager.podMovementHandler.cryoPods[patientManager.podMovementHandler.currentActivePod].UpdateColor(correctColor);
                 patientManager.MovePodsRight();
             }
 
@@ -82,6 +86,7 @@ public class R_GameManager : MonoBehaviour
         }
         else if (patientManager.activePatients[patientManager.currentActivePatientNum].diagnosed != true && reportManager.SubmitDiagnosis(patientManager.activePatients[patientManager.currentActivePatientNum]) == false && reportManager.currentDiagnosis != Diagnosis.Undiagnosed)
         {
+            patientManager.podMovementHandler.cryoPods[patientManager.podMovementHandler.currentActivePod].UpdateColor(incorrectColor);
             restoreLifeStreak = 0;
             Lives--;
             wrongAnswerAmount++;

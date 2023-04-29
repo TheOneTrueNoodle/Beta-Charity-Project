@@ -43,6 +43,7 @@ public class R_PatientManager : MonoBehaviour
             newPatient.newPatientBioGender = RegularPatientData.AllPatients[patient].newPatientBioGender;
             newPatient.ECG_GraphSprite = IrregularPatientData.AllPatients[patient].ECG_GraphSprite;
             newPatient.correctDiagnosis = IrregularPatientData.AllPatients[patient].correctDiagnosis;
+            newPatient.submittedDiagnosis = Diagnosis.Undiagnosed;
 
             if (newPatient.newPatientBioGender == Gender.Male)
             {

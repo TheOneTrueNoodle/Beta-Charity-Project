@@ -8,14 +8,14 @@ public class R_Patient
     public bool diagnosed = false;
 
     public string dataName;
-    public string patientName;
+    [HideInInspector] public string patientName;
     public int patientAge;
     public string patientBioGender;
-    [HideInInspector]public Gender newPatientBioGender;
+    [HideInInspector] public Gender newPatientBioGender;
 
     public Texture ECG_GraphSprite;
     public Diagnosis correctDiagnosis;
-    public Diagnosis submittedDiagnosis;
+    [HideInInspector] public Diagnosis submittedDiagnosis = Diagnosis.Undiagnosed;
 }
 
 public enum Gender

@@ -57,8 +57,9 @@ public class R_PodMovementHandlerCarousel : MonoBehaviour
     {
         for (int i = 0; i < cryoPods.Count; i++)
         {
-            int distFromActive;
-            if (i > currentActivePod) { distFromActive = 0 - (i - currentActivePod); }
+            if(i == currentActivePod){ cryoPods[i].lights2D.enabled = true; }
+            else { cryoPods[i].lights2D.enabled = false; }
+
             if (i < currentActivePod)
             {
                 cryoPods[i].GetComponent<Canvas>().sortingOrder = 0 - (currentActivePod - i);

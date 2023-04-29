@@ -39,6 +39,7 @@ public class R_PatientManager : MonoBehaviour
             R_Patient newPatient = new R_Patient();
 
             //newPatient.patientName = IrregularPatientData.AllPatients[patient].patientName;
+            newPatient.dataName = IrregularPatientData.AllPatients[patient].dataName;
             newPatient.patientAge = IrregularPatientData.AllPatients[patient].patientAge;
             newPatient.newPatientBioGender = RegularPatientData.AllPatients[patient].newPatientBioGender;
             newPatient.ECG_GraphSprite = IrregularPatientData.AllPatients[patient].ECG_GraphSprite;
@@ -67,6 +68,7 @@ public class R_PatientManager : MonoBehaviour
             R_Patient newPatient = new R_Patient();
 
             //newPatient.patientName = RegularPatientData.AllPatients[patient].patientName;
+            newPatient.dataName = RegularPatientData.AllPatients[patient].dataName;
             newPatient.patientAge = RegularPatientData.AllPatients[patient].patientAge;
             newPatient.newPatientBioGender = RegularPatientData.AllPatients[patient].newPatientBioGender;
             newPatient.ECG_GraphSprite = RegularPatientData.AllPatients[patient].ECG_GraphSprite;

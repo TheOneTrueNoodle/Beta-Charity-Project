@@ -10,7 +10,7 @@ public class R_Patient
     public string dataName;
     [HideInInspector] public string patientName;
     public int patientAge;
-    public string patientBioGender;
+    [HideInInspector] public string patientBioGender;
     [HideInInspector] public Gender newPatientBioGender;
 
     public Texture ECG_GraphSprite;

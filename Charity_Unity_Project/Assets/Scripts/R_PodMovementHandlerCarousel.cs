@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class R_PodMovementHandlerCarousel : MonoBehaviour
 {
@@ -41,7 +42,7 @@ public class R_PodMovementHandlerCarousel : MonoBehaviour
 
         //moveQueue.Enqueue(MoveFromTo(false));
         moveQueue.Enqueue(CarouselMovement());
-        ReorderPods();
+        UpdatePodLights();
     }
 
     public void MoveRight(int newActivePod)
@@ -50,28 +51,15 @@ public class R_PodMovementHandlerCarousel : MonoBehaviour
 
         //moveQueue.Enqueue(MoveFromTo(true));
         moveQueue.Enqueue(CarouselMovement());
-        //ReorderPods();
+        UpdatePodLights();
     }
 
-    private void ReorderPods()
+    private void UpdatePodLights()
     {
         for (int i = 0; i < cryoPods.Count; i++)
         {
-            if(i == currentActivePod){ cryoPods[i].lights2D.enabled = true; }
+            if (i == currentActivePod) { cryoPods[i].lights2D.enabled = true; }
             else { cryoPods[i].lights2D.enabled = false; }
-
-            if (i < currentActivePod)
-            {
-                cryoPods[i].GetComponent<Canvas>().sortingOrder = 0 - (currentActivePod - i);
-            }
-            else if (i > currentActivePod)
-            {
-                cryoPods[i].GetComponent<Canvas>().sortingOrder = 0 - (i - currentActivePod);
-            }
-            else if (i == currentActivePod)
-            {
-                cryoPods[i].GetComponent<Canvas>().sortingOrder = 0;
-            }
         }
     }
 

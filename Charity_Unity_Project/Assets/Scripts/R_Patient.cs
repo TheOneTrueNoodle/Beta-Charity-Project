@@ -9,6 +9,7 @@ public class R_Patient
 
     public string dataName;
     [HideInInspector] public string patientName;
+    [HideInInspector] public string patientRole;
     public int patientAge;
     [HideInInspector] public string patientBioGender;
     [HideInInspector] public Gender newPatientBioGender;

@@ -14,6 +14,7 @@ public class R_PatientManager : MonoBehaviour
     [Header("Patient Names Data")]
     public R_RandomNameData MaleNames;
     public R_RandomNameData FemaleNames;
+    public R_RandomNameData Roles;
 
     public int PatientNumberPerRound = 6;
     [HideInInspector] public int patientsCompleted = 0;
@@ -23,6 +24,7 @@ public class R_PatientManager : MonoBehaviour
 
     [Header("Patient Information Display Variables")]
     [SerializeField] private TMP_Text nameDisp;
+    [SerializeField] private TMP_Text roleDisp;
     [SerializeField] private TMP_Text ageDisp;
     [SerializeField] private TMP_Text genderDisp;
     [SerializeField] private RawImage ECGDisp;
@@ -57,6 +59,8 @@ public class R_PatientManager : MonoBehaviour
                 newPatient.patientName = name;
             }
 
+            string role = Roles.PossibleNames[Random.Range(0, Roles.PossibleNames.Count)];
+            newPatient.patientRole = role;
             activePatients.Add(newPatient);
         }
 
@@ -85,6 +89,8 @@ public class R_PatientManager : MonoBehaviour
                 newPatient.patientName = name;
             }
 
+            string role = Roles.PossibleNames[Random.Range(0, Roles.PossibleNames.Count)];
+            newPatient.patientRole = role;
             activePatients.Add(newPatient);
         }
 
@@ -139,6 +145,7 @@ public class R_PatientManager : MonoBehaviour
     public void changeDisplays()
     {
         nameDisp.text = "Name: " + activePatients[currentActivePatientNum].patientName;
+        if(roleDisp != null) { roleDisp.text = "The " + activePatients[currentActivePatientNum].patientRole; }
         ageDisp.text = "Age: " + activePatients[currentActivePatientNum].patientAge.ToString();
         genderDisp.text = "Bio Sex: " + activePatients[currentActivePatientNum].newPatientBioGender;
         ECGDisp.texture = activePatients[currentActivePatientNum].ECG_GraphSprite;

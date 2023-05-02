@@ -21,6 +21,10 @@ public class R_GameManager : MonoBehaviour
     public int Lives = 3;
     private int restoreLifeStreak;
 
+    [Header("Color Change Settings")]
+    public Color numberPanelImageDefaultColor;
+    public Color lightsImageDefaultColor;
+    public Color Lights2DDefaultColor;
     public Color correctColor;
     public Color incorrectColor;
 
@@ -40,6 +44,10 @@ public class R_GameManager : MonoBehaviour
     //Function to change active patient
     private void Start()
     {
+        for(int i = 0; i < patientManager.podMovementHandler.cryoPods.Count; i++)
+        {
+            patientManager.podMovementHandler.cryoPods[i].startColor(lightsImageDefaultColor, Lights2DDefaultColor, numberPanelImageDefaultColor);
+        }
         patientManager.newPatientSet(1);
         TimeLeft = StartTime;
         TimerOn = false;

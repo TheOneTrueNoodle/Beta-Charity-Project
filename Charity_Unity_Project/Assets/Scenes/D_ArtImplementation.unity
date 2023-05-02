@@ -13964,6 +13964,9 @@ MonoBehaviour:
   - {fileID: 293778065}
   - {fileID: 2142470403}
   Lives: 3
+  numberPanelImageDefaultColor: {r: 0.21960784, g: 0.49019608, b: 0.7411765, a: 1}
+  lightsImageDefaultColor: {r: 1, g: 1, b: 1, a: 1}
+  Lights2DDefaultColor: {r: 0.078431375, g: 0, b: 1, a: 1}
   correctColor: {r: 0.025418244, g: 0.7924528, b: 0.04303499, a: 1}
   incorrectColor: {r: 0.7924528, g: 0.11512991, b: 0.11512991, a: 1}
   DisplayCanvas: {fileID: 1909560505}

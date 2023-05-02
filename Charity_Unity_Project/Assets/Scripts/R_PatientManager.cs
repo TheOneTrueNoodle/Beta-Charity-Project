@@ -145,7 +145,7 @@ public class R_PatientManager : MonoBehaviour
     public void changeDisplays()
     {
         nameDisp.text = "Name: " + activePatients[currentActivePatientNum].patientName;
-        if(roleDisp != null) { roleDisp.text = "The " + activePatients[currentActivePatientNum].patientRole; }
+        if(roleDisp != null) { roleDisp.text = "Role: " + activePatients[currentActivePatientNum].patientRole; }
         ageDisp.text = "Age: " + activePatients[currentActivePatientNum].patientAge.ToString();
         genderDisp.text = "Bio Sex: " + activePatients[currentActivePatientNum].newPatientBioGender;
         ECGDisp.texture = activePatients[currentActivePatientNum].ECG_GraphSprite;

@@ -1207,6 +1207,7 @@ MonoBehaviour:
     diagnosed: 0
     dataName: 
     patientName: 
+    patientRole: 
     patientAge: 0
     patientBioGender: 
     newPatientBioGender: 0
@@ -5690,6 +5691,7 @@ MonoBehaviour:
     diagnosed: 0
     dataName: 
     patientName: 
+    patientRole: 
     patientAge: 0
     patientBioGender: 
     newPatientBioGender: 0
@@ -9316,6 +9318,7 @@ MonoBehaviour:
     diagnosed: 0
     dataName: 
     patientName: 
+    patientRole: 
     patientAge: 0
     patientBioGender: 
     newPatientBioGender: 0
@@ -23745,11 +23748,13 @@ MonoBehaviour:
   IrregularPatientData: {fileID: 11400000, guid: 1ab3d35698476484a9b00b4e42ff4a69, type: 2}
   MaleNames: {fileID: 11400000, guid: 0547740690405d74e80ebaa1c982afc8, type: 2}
   FemaleNames: {fileID: 11400000, guid: 2c3dd8bbaa98a4c409ac39407bec5f62, type: 2}
+  Roles: {fileID: 11400000, guid: 50ad37626d41a4c40b109bbcd2014e07, type: 2}
   PatientNumberPerRound: 6
   patientsCompleted: 0
   activePatients: []
   currentActivePatientNum: 0
   nameDisp: {fileID: 37282248}
+  roleDisp: {fileID: 134017135}
   ageDisp: {fileID: 365714129}
   genderDisp: {fileID: 1907147366}
   ECGDisp: {fileID: 1624779058}
@@ -29401,6 +29406,7 @@ MonoBehaviour:
     diagnosed: 0
     dataName: 
     patientName: 
+    patientRole: 
     patientAge: 0
     patientBioGender: 
     newPatientBioGender: 0
@@ -30735,6 +30741,7 @@ MonoBehaviour:
     diagnosed: 0
     dataName: 
     patientName: 
+    patientRole: 
     patientAge: 0
     patientBioGender: 
     newPatientBioGender: 0
@@ -35635,6 +35642,7 @@ MonoBehaviour:
     diagnosed: 0
     dataName: 
     patientName: 
+    patientRole: 
     patientAge: 0
     patientBioGender: 
     newPatientBioGender: 0
@@ -36851,7 +36859,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &2100286776
 RectTransform:
   m_ObjectHideFlags: 0

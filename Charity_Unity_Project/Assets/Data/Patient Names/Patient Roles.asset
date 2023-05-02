@@ -12,4 +12,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ee7e45941c010c842a1b94691df3fc62, type: 3}
   m_Name: Patient Roles
   m_EditorClassIdentifier: 
-  PossibleNames: []
+  PossibleNames:
+  - Engineer
+  - Mechanic
+  - Pilot
+  - Co-Pilot
+  - Janitor
+  - Electrician
+  - Doctor
+  - Chef
+  - Farmer
+  - Scientist
+  - Teacher
+  - Botanist
+  - 'Gardener '
+  - Biologist
+  - Musician
+  - Dentist
+  - Surgeon
+  - Student
+  - Mathematician
+  - Entertainer

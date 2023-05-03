@@ -67,6 +67,9 @@ public class R_GameManager : MonoBehaviour
             //Correct Answer
             patientsComplete++;
             patientManager.patientsCompleted++;
+
+            reportManager.currentDiagnosis = 0;
+
             if (patientManager.patientsCompleted >= patientManager.activePatients.Count)
             {
                 //New Round
@@ -94,6 +97,8 @@ public class R_GameManager : MonoBehaviour
         }
         else if (patientManager.activePatients[patientManager.currentActivePatientNum].diagnosed != true && reportManager.SubmitDiagnosis(patientManager.activePatients[patientManager.currentActivePatientNum]) == false && reportManager.currentDiagnosis != Diagnosis.Undiagnosed)
         {
+            //Wrong diagnosis and not undiagnosed
+            reportManager.currentDiagnosis = 0;
             patientManager.podMovementHandler.cryoPods[patientManager.podMovementHandler.currentActivePod].UpdateColor(incorrectColor);
             restoreLifeStreak = 0;
             Lives--;

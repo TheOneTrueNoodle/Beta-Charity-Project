@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class R_ReportManager : MonoBehaviour
 {
@@ -26,6 +27,8 @@ public class R_ReportManager : MonoBehaviour
     public GameObject CorrectAnswerDisplay;
     public GameObject IncorrectAnswerDisplay;
     public float DisplayTime = 1f;
+
+    public ToggleGroup toggleGroup;
 
     public void shiftViewport()
     {
@@ -83,7 +86,7 @@ public class R_ReportManager : MonoBehaviour
             currentPatient.submittedDiagnosis = currentDiagnosis;
 
             FindObjectOfType<D_Audio_System>().PlayAudio("correct");
-            currentDiagnosis = 0;
+            turnOffToggles();
 
             StartCoroutine(CorrectAnswer());
 
@@ -96,7 +99,7 @@ public class R_ReportManager : MonoBehaviour
             diagnosisDisplay.text = PossibleDiagnosis[diagnosisNumber] + " is the incorrect diagnosis"; //Currently does not lock you out of correcting your mistake
 
             FindObjectOfType<D_Audio_System>().PlayAudio("incorrect");
-            //currentPatient.diagnosed = true;
+            turnOffToggles();
 
             StartCoroutine(IncorrectAnswer());
 
@@ -107,6 +110,14 @@ public class R_ReportManager : MonoBehaviour
             //No diagnosis selected
             diagnosisDisplay.text = "Please select a diagnosis";
             return false;
+        }
+    }
+
+    public void turnOffToggles()
+    {
+        foreach(Toggle toggle in toggleGroup.ActiveToggles())
+        {
+            toggle.isOn = false;
         }
     }
 

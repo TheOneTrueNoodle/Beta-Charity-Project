@@ -16,6 +16,7 @@ MonoBehaviour:
   - diagnosed: 0
     dataName: E1
     patientName: Jeremy
+    patientRole: 
     patientAge: 28
     patientBioGender: Male
     newPatientBioGender: 0
@@ -25,6 +26,7 @@ MonoBehaviour:
   - diagnosed: 0
     dataName: E4
     patientName: Susan
+    patientRole: 
     patientAge: 47
     patientBioGender: Female
     newPatientBioGender: 0
@@ -34,6 +36,7 @@ MonoBehaviour:
   - diagnosed: 0
     dataName: G2
     patientName: Mary
+    patientRole: 
     patientAge: 47
     patientBioGender: Female
     newPatientBioGender: 0
@@ -43,6 +46,7 @@ MonoBehaviour:
   - diagnosed: 0
     dataName: G6
     patientName: Madeline
+    patientRole: 
     patientAge: 47
     patientBioGender: Female
     newPatientBioGender: 0
@@ -52,6 +56,7 @@ MonoBehaviour:
   - diagnosed: 0
     dataName: J2
     patientName: Patricia
+    patientRole: 
     patientAge: 47
     patientBioGender: Female
     newPatientBioGender: 0
@@ -61,6 +66,7 @@ MonoBehaviour:
   - diagnosed: 0
     dataName: H1
     patientName: Patricia
+    patientRole: 
     patientAge: 47
     patientBioGender: Female
     newPatientBioGender: 0
@@ -70,6 +76,7 @@ MonoBehaviour:
   - diagnosed: 0
     dataName: H2
     patientName: Patricia
+    patientRole: 
     patientAge: 47
     patientBioGender: Female
     newPatientBioGender: 0
@@ -79,6 +86,7 @@ MonoBehaviour:
   - diagnosed: 0
     dataName: H3
     patientName: Patricia
+    patientRole: 
     patientAge: 47
     patientBioGender: Female
     newPatientBioGender: 0
@@ -88,6 +96,7 @@ MonoBehaviour:
   - diagnosed: 0
     dataName: H4
     patientName: Patricia
+    patientRole: 
     patientAge: 47
     patientBioGender: Female
     newPatientBioGender: 0
@@ -97,6 +106,7 @@ MonoBehaviour:
   - diagnosed: 0
     dataName: H6
     patientName: Patricia
+    patientRole: 
     patientAge: 47
     patientBioGender: Female
     newPatientBioGender: 0
@@ -106,6 +116,7 @@ MonoBehaviour:
   - diagnosed: 0
     dataName: H7
     patientName: Patricia
+    patientRole: 
     patientAge: 47
     patientBioGender: Female
     newPatientBioGender: 0
@@ -115,6 +126,7 @@ MonoBehaviour:
   - diagnosed: 0
     dataName: H10
     patientName: Patricia
+    patientRole: 
     patientAge: 47
     patientBioGender: Female
     newPatientBioGender: 0
@@ -124,6 +136,7 @@ MonoBehaviour:
   - diagnosed: 0
     dataName: A2
     patientName: Patricia
+    patientRole: 
     patientAge: 47
     patientBioGender: Female
     newPatientBioGender: 0
@@ -133,6 +146,7 @@ MonoBehaviour:
   - diagnosed: 0
     dataName: A3
     patientName: Patricia
+    patientRole: 
     patientAge: 47
     patientBioGender: Female
     newPatientBioGender: 0
@@ -142,6 +156,7 @@ MonoBehaviour:
   - diagnosed: 0
     dataName: A6
     patientName: Patricia
+    patientRole: 
     patientAge: 47
     patientBioGender: Female
     newPatientBioGender: 0
@@ -151,6 +166,7 @@ MonoBehaviour:
   - diagnosed: 0
     dataName: A17
     patientName: Patricia
+    patientRole: 
     patientAge: 47
     patientBioGender: Female
     newPatientBioGender: 0
@@ -160,6 +176,7 @@ MonoBehaviour:
   - diagnosed: 0
     dataName: B3
     patientName: Patricia
+    patientRole: 
     patientAge: 47
     patientBioGender: Female
     newPatientBioGender: 0
@@ -169,6 +186,7 @@ MonoBehaviour:
   - diagnosed: 0
     dataName: B5
     patientName: Patricia
+    patientRole: 
     patientAge: 47
     patientBioGender: Female
     newPatientBioGender: 0
@@ -178,6 +196,7 @@ MonoBehaviour:
   - diagnosed: 0
     dataName: B6
     patientName: Patricia
+    patientRole: 
     patientAge: 47
     patientBioGender: Female
     newPatientBioGender: 0
@@ -187,6 +206,7 @@ MonoBehaviour:
   - diagnosed: 0
     dataName: C2
     patientName: Patricia
+    patientRole: 
     patientAge: 47
     patientBioGender: Female
     newPatientBioGender: 0
@@ -196,6 +216,7 @@ MonoBehaviour:
   - diagnosed: 0
     dataName: C5
     patientName: Patricia
+    patientRole: 
     patientAge: 47
     patientBioGender: Female
     newPatientBioGender: 0
@@ -205,6 +226,7 @@ MonoBehaviour:
   - diagnosed: 0
     dataName: C8
     patientName: Patricia
+    patientRole: 
     patientAge: 47
     patientBioGender: Female
     newPatientBioGender: 0
@@ -214,6 +236,7 @@ MonoBehaviour:
   - diagnosed: 0
     dataName: C9
     patientName: Patricia
+    patientRole: 
     patientAge: 47
     patientBioGender: Female
     newPatientBioGender: 0
@@ -223,6 +246,7 @@ MonoBehaviour:
   - diagnosed: 0
     dataName: C10
     patientName: Patricia
+    patientRole: 
     patientAge: 47
     patientBioGender: Female
     newPatientBioGender: 0
@@ -232,6 +256,7 @@ MonoBehaviour:
   - diagnosed: 0
     dataName: D1
     patientName: Patricia
+    patientRole: 
     patientAge: 47
     patientBioGender: Female
     newPatientBioGender: 0
@@ -241,6 +266,7 @@ MonoBehaviour:
   - diagnosed: 0
     dataName: D2
     patientName: Patricia
+    patientRole: 
     patientAge: 47
     patientBioGender: Female
     newPatientBioGender: 0
@@ -250,6 +276,7 @@ MonoBehaviour:
   - diagnosed: 0
     dataName: D3
     patientName: Patricia
+    patientRole: 
     patientAge: 47
     patientBioGender: Female
     newPatientBioGender: 0
@@ -259,6 +286,7 @@ MonoBehaviour:
   - diagnosed: 0
     dataName: D4
     patientName: Patricia
+    patientRole: 
     patientAge: 47
     patientBioGender: Female
     newPatientBioGender: 0
@@ -268,15 +296,17 @@ MonoBehaviour:
   - diagnosed: 0
     dataName: E1
     patientName: Patricia
+    patientRole: 
     patientAge: 47
     patientBioGender: Female
     newPatientBioGender: 0
-    ECG_GraphSprite: {fileID: 2800000, guid: fcfa2c5e95fffc644b98b83c07962fc5, type: 3}
+    ECG_GraphSprite: {fileID: 2800000, guid: 20a3cbe6f4a27d543995dd60be38a190, type: 3}
     correctDiagnosis: 13
     submittedDiagnosis: 0
   - diagnosed: 0
     dataName: E2
     patientName: Patricia
+    patientRole: 
     patientAge: 47
     patientBioGender: Female
     newPatientBioGender: 0
@@ -286,6 +316,7 @@ MonoBehaviour:
   - diagnosed: 0
     dataName: E7
     patientName: Patricia
+    patientRole: 
     patientAge: 47
     patientBioGender: Female
     newPatientBioGender: 0
@@ -295,6 +326,7 @@ MonoBehaviour:
   - diagnosed: 0
     dataName: D1b
     patientName: Patricia
+    patientRole: 
     patientAge: 47
     patientBioGender: Female
     newPatientBioGender: 0
@@ -304,6 +336,7 @@ MonoBehaviour:
   - diagnosed: 0
     dataName: D6b
     patientName: Patricia
+    patientRole: 
     patientAge: 47
     patientBioGender: Female
     newPatientBioGender: 0
@@ -313,9 +346,10 @@ MonoBehaviour:
   - diagnosed: 0
     dataName: D7b
     patientName: Patricia
+    patientRole: 
     patientAge: 47
     patientBioGender: Female
     newPatientBioGender: 0
-    ECG_GraphSprite: {fileID: 2800000, guid: 5b2765d66bef45e4c81e10b9e481e050, type: 3}
+    ECG_GraphSprite: {fileID: 2800000, guid: 4ef4bbfbe0a00c64f908a525dcb3b329, type: 3}
     correctDiagnosis: 13
     submittedDiagnosis: 0

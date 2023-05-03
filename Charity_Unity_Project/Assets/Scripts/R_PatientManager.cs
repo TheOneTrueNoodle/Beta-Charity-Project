@@ -35,63 +35,96 @@ public class R_PatientManager : MonoBehaviour
     {
         patientsCompleted = 0;
         activePatients.Clear();
+
+        List<int> usedNums = new List<int>();
+
         for (int i = 0; i < numOfIrregular; i++)
         {
             int patient = Random.Range(0, IrregularPatientData.AllPatients.Count);
-            R_Patient newPatient = new R_Patient();
 
-            //newPatient.patientName = IrregularPatientData.AllPatients[patient].patientName;
-            newPatient.dataName = IrregularPatientData.AllPatients[patient].dataName;
-            newPatient.patientAge = IrregularPatientData.AllPatients[patient].patientAge;
-            newPatient.newPatientBioGender = RegularPatientData.AllPatients[patient].newPatientBioGender;
-            newPatient.ECG_GraphSprite = IrregularPatientData.AllPatients[patient].ECG_GraphSprite;
-            newPatient.correctDiagnosis = IrregularPatientData.AllPatients[patient].correctDiagnosis;
-            newPatient.submittedDiagnosis = Diagnosis.Undiagnosed;
-
-            if (newPatient.newPatientBioGender == Gender.Male)
+            bool repeat = false;
+            foreach(int check in usedNums)
             {
-                string name = MaleNames.PossibleNames[Random.Range(0, MaleNames.PossibleNames.Count)];
-                newPatient.patientName = name;
-            }
-            else
-            {
-                string name = FemaleNames.PossibleNames[Random.Range(0, FemaleNames.PossibleNames.Count)];
-                newPatient.patientName = name;
+                if (patient == check)
+                {
+                    i--;
+                    repeat = true;
+                }
             }
 
-            string role = Roles.PossibleNames[Random.Range(0, Roles.PossibleNames.Count)];
-            newPatient.patientRole = role;
-            activePatients.Add(newPatient);
+            if (!repeat)
+            {
+                R_Patient newPatient = new R_Patient();
+
+                //newPatient.patientName = IrregularPatientData.AllPatients[patient].patientName;
+                newPatient.dataName = IrregularPatientData.AllPatients[patient].dataName;
+                newPatient.patientAge = Random.Range(18, 50);
+                newPatient.newPatientBioGender = RegularPatientData.AllPatients[patient].newPatientBioGender;
+                newPatient.ECG_GraphSprite = IrregularPatientData.AllPatients[patient].ECG_GraphSprite;
+                newPatient.correctDiagnosis = IrregularPatientData.AllPatients[patient].correctDiagnosis;
+                newPatient.submittedDiagnosis = Diagnosis.Undiagnosed;
+
+                if (newPatient.newPatientBioGender == Gender.Male)
+                {
+                    string name = MaleNames.PossibleNames[Random.Range(0, MaleNames.PossibleNames.Count)];
+                    newPatient.patientName = name;
+                }
+                else
+                {
+                    string name = FemaleNames.PossibleNames[Random.Range(0, FemaleNames.PossibleNames.Count)];
+                    newPatient.patientName = name;
+                }
+
+                usedNums.Add(patient);
+                string role = Roles.PossibleNames[Random.Range(0, Roles.PossibleNames.Count)];
+                newPatient.patientRole = role;
+                activePatients.Add(newPatient);
+            }
         }
 
         int remainingPatients = PatientNumberPerRound - numOfIrregular;
 
+        usedNums.Clear();
         for(int i = 0; i < remainingPatients; i++)
         {
             int patient = Random.Range(0, RegularPatientData.AllPatients.Count);
-            R_Patient newPatient = new R_Patient();
 
-            //newPatient.patientName = RegularPatientData.AllPatients[patient].patientName;
-            newPatient.dataName = RegularPatientData.AllPatients[patient].dataName;
-            newPatient.patientAge = RegularPatientData.AllPatients[patient].patientAge;
-            newPatient.newPatientBioGender = RegularPatientData.AllPatients[patient].newPatientBioGender;
-            newPatient.ECG_GraphSprite = RegularPatientData.AllPatients[patient].ECG_GraphSprite;
-            newPatient.correctDiagnosis = RegularPatientData.AllPatients[patient].correctDiagnosis;
-
-            if(newPatient.newPatientBioGender == Gender.Male)
+            bool repeat = false;
+            foreach (int check in usedNums)
             {
-                string name = MaleNames.PossibleNames[Random.Range(0, MaleNames.PossibleNames.Count)];
-                newPatient.patientName = name;
-            }
-            else
-            {
-                string name = FemaleNames.PossibleNames[Random.Range(0, FemaleNames.PossibleNames.Count)];
-                newPatient.patientName = name;
+                if (patient == check)
+                {
+                    i--;
+                    repeat = true;
+                }
             }
 
-            string role = Roles.PossibleNames[Random.Range(0, Roles.PossibleNames.Count)];
-            newPatient.patientRole = role;
-            activePatients.Add(newPatient);
+            if (!repeat)
+            {
+                R_Patient newPatient = new R_Patient();
+
+                //newPatient.patientName = RegularPatientData.AllPatients[patient].patientName;
+                newPatient.dataName = RegularPatientData.AllPatients[patient].dataName;
+                newPatient.patientAge = Random.Range(18, 50);
+                newPatient.newPatientBioGender = RegularPatientData.AllPatients[patient].newPatientBioGender;
+                newPatient.ECG_GraphSprite = RegularPatientData.AllPatients[patient].ECG_GraphSprite;
+                newPatient.correctDiagnosis = RegularPatientData.AllPatients[patient].correctDiagnosis;
+
+                if (newPatient.newPatientBioGender == Gender.Male)
+                {
+                    string name = MaleNames.PossibleNames[Random.Range(0, MaleNames.PossibleNames.Count)];
+                    newPatient.patientName = name;
+                }
+                else
+                {
+                    string name = FemaleNames.PossibleNames[Random.Range(0, FemaleNames.PossibleNames.Count)];
+                    newPatient.patientName = name;
+                }
+
+                string role = Roles.PossibleNames[Random.Range(0, Roles.PossibleNames.Count)];
+                newPatient.patientRole = role;
+                activePatients.Add(newPatient);
+            }
         }
 
         shufflePatientOrder(activePatients);

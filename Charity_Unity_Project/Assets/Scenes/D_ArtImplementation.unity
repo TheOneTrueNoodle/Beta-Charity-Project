@@ -32689,34 +32689,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: AudioSystem
       objectReference: {fileID: 0}
-    - target: {fileID: 1825278160864030281, guid: 45644e09b59c6a145a30f04ae0fa047f, type: 3}
-      propertyPath: Sounds.Array.size
-      value: 12
-      objectReference: {fileID: 0}
-    - target: {fileID: 1825278160864030281, guid: 45644e09b59c6a145a30f04ae0fa047f, type: 3}
-      propertyPath: Sounds.Array.data[2]
-      value: 
-      objectReference: {fileID: 8300000, guid: 4afb5dba9fd1df545971558f6761f8af, type: 3}
-    - target: {fileID: 1825278160864030281, guid: 45644e09b59c6a145a30f04ae0fa047f, type: 3}
-      propertyPath: SoundNames.Array.size
-      value: 12
-      objectReference: {fileID: 0}
-    - target: {fileID: 1825278160864030281, guid: 45644e09b59c6a145a30f04ae0fa047f, type: 3}
-      propertyPath: Sounds.Array.data[11]
-      value: 
-      objectReference: {fileID: 8300000, guid: 4afb5dba9fd1df545971558f6761f8af, type: 3}
-    - target: {fileID: 1825278160864030281, guid: 45644e09b59c6a145a30f04ae0fa047f, type: 3}
-      propertyPath: SoundNames.Array.data[11]
-      value: ambience1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1825278160864030281, guid: 45644e09b59c6a145a30f04ae0fa047f, type: 3}
-      propertyPath: SoundVolume.Array.data[0]
-      value: 0.2
-      objectReference: {fileID: 0}
-    - target: {fileID: 1825278160864030281, guid: 45644e09b59c6a145a30f04ae0fa047f, type: 3}
-      propertyPath: SoundVolume.Array.data[2]
-      value: 0.2
-      objectReference: {fileID: 0}
     - target: {fileID: 1825278160864030282, guid: 45644e09b59c6a145a30f04ae0fa047f, type: 3}
       propertyPath: m_RootOrder
       value: 10

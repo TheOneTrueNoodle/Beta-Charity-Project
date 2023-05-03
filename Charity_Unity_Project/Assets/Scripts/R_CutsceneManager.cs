@@ -22,7 +22,7 @@ public class R_CutsceneManager : MonoBehaviour
 
     private void Start()
     {
-        animator1.Play("opening");
+        animator1.Play("Opening");
         isPlaying = true;
     }
 

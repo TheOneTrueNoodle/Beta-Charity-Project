@@ -15,6 +15,7 @@ public class C_PauseMenu : MonoBehaviour
     public Slider MusicVolumeSlider;
 
     public AudioSource music;
+    public AudioSource SFX;
 
     bool isInSettings;
 
@@ -37,6 +38,7 @@ public class C_PauseMenu : MonoBehaviour
         }
 
         SFXVolumeMultiplier = sfxVolumeSlider.value;
+        SFX.volume = SFXVolumeMultiplier;
     }
 
     void Start()
@@ -47,6 +49,11 @@ public class C_PauseMenu : MonoBehaviour
             if (source.name == "music")
             {
                 music = source;
+                
+            }
+            if (source.name == "LoopingAmbience")
+            {
+                SFX = source;
             }
         }
     }
@@ -54,7 +61,9 @@ public class C_PauseMenu : MonoBehaviour
     public void ChangeMusicVolume()
     {
         MusicVolumeMultiplier = MusicVolumeSlider.value;
+        SFXVolumeMultiplier = sfxVolumeSlider.value;
         music.volume = MusicVolumeMultiplier;
+        SFX.volume = SFXVolumeMultiplier;
 
     }
     public void openSettings()

@@ -3168,7 +3168,19 @@ MonoBehaviour:
   m_Value: 0.505
   m_OnValueChanged:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 882837784}
+        m_TargetAssemblyTypeName: C_PauseMenu, Assembly-CSharp
+        m_MethodName: ChangeMusicVolume
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &156427791
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15919,6 +15931,7 @@ MonoBehaviour:
   sfxVolumeSlider: {fileID: 156427790}
   MusicVolumeSlider: {fileID: 1703262921}
   music: {fileID: 0}
+  SFX: {fileID: 952720097}
   SFXVolumeMultiplier: 1
   MusicVolumeMultiplier: 1
 --- !u!1 &882933334
@@ -16959,6 +16972,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c4eb3c16f4fce8a4d8c806e4a590f0c9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!82 &952720097 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 952720098, guid: 45644e09b59c6a145a30f04ae0fa047f, type: 3}
+  m_PrefabInstance: {fileID: 1835299762}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &963540183
 GameObject:
   m_ObjectHideFlags: 0
@@ -33096,6 +33114,42 @@ PrefabInstance:
     - target: {fileID: 1825278160864030280, guid: 45644e09b59c6a145a30f04ae0fa047f, type: 3}
       propertyPath: m_Name
       value: AudioSystem
+      objectReference: {fileID: 0}
+    - target: {fileID: 1825278160864030281, guid: 45644e09b59c6a145a30f04ae0fa047f, type: 3}
+      propertyPath: Sounds.Array.size
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 1825278160864030281, guid: 45644e09b59c6a145a30f04ae0fa047f, type: 3}
+      propertyPath: SoundNames.Array.size
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 1825278160864030281, guid: 45644e09b59c6a145a30f04ae0fa047f, type: 3}
+      propertyPath: Sounds.Array.data[11]
+      value: 
+      objectReference: {fileID: 8300000, guid: f7183ee5f49ba05409af43ff3eac3793, type: 3}
+    - target: {fileID: 1825278160864030281, guid: 45644e09b59c6a145a30f04ae0fa047f, type: 3}
+      propertyPath: Sounds.Array.data[12]
+      value: 
+      objectReference: {fileID: 8300000, guid: f7183ee5f49ba05409af43ff3eac3793, type: 3}
+    - target: {fileID: 1825278160864030281, guid: 45644e09b59c6a145a30f04ae0fa047f, type: 3}
+      propertyPath: SoundVolume.Array.size
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 1825278160864030281, guid: 45644e09b59c6a145a30f04ae0fa047f, type: 3}
+      propertyPath: SoundNames.Array.data[11]
+      value: LoopingAmbience
+      objectReference: {fileID: 0}
+    - target: {fileID: 1825278160864030281, guid: 45644e09b59c6a145a30f04ae0fa047f, type: 3}
+      propertyPath: SoundNames.Array.data[12]
+      value: LoopingAmbience
+      objectReference: {fileID: 0}
+    - target: {fileID: 1825278160864030281, guid: 45644e09b59c6a145a30f04ae0fa047f, type: 3}
+      propertyPath: SoundVolume.Array.data[11]
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1825278160864030281, guid: 45644e09b59c6a145a30f04ae0fa047f, type: 3}
+      propertyPath: SoundVolume.Array.data[12]
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1825278160864030282, guid: 45644e09b59c6a145a30f04ae0fa047f, type: 3}
       propertyPath: m_RootOrder

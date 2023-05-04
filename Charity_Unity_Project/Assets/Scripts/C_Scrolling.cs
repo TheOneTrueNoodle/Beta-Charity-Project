@@ -16,7 +16,7 @@ public class C_Scrolling : MonoBehaviour
     private bool scrollPaused = false;
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.H))
+        /*if (Input.GetKeyDown(KeyCode.H))
         {
             if (scrollPaused == false)
             {
@@ -30,7 +30,7 @@ public class C_Scrolling : MonoBehaviour
                 pauseButton.SetActive(true);
                 playButton.SetActive(false);
             }
-        }
+        }*/
         if (scrollPaused == false)
         {
 
